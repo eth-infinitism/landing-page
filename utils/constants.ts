@@ -29,6 +29,10 @@ export const NavigationItems: INavigationItem[] = [
     label: 'Resources',
     link: '#resources',
   },
+  {
+    label: 'Documentations',
+    link: '/docs',
+  },
 ];
 
 export interface IWhyItem {

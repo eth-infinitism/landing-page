@@ -14,9 +14,9 @@ yarn install
 Then, start local development.
 
 ```bash
-npm run dev
+npm run next
 # or
-yarn dev
+yarn next
 ```
 
 There you go. Check [localhost:3000](http://localhost:3000).
