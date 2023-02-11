@@ -4,9 +4,9 @@ import React from 'react';
 import { INavigationItem, NavigationItems } from '@utils/constants';
 import logo from '@assets/logo.svg';
 
-const NavItem = ({ label, link }: INavigationItem) => {
+export const NavItem = ({ label, link }: INavigationItem) => {
   return (
-    <Link href={link} className="self-center">
+    <Link href={link} className="self-center rounded-2xl px-6 py-3 hover:bg-black hover:text-white">
       {label}
     </Link>
   );
@@ -14,14 +14,14 @@ const NavItem = ({ label, link }: INavigationItem) => {
 
 export default function NavBar() {
   return (
-    <div className="sticky top-0 flex justify-center w-full bg-dark border-b border-gray-700 text-xs z-50">
-      <div className="flex flex-row h-[102px] w-[950px] self-center justify-between ">
+    <div className="flex w-full text-xs z-50 flex-row h-[102px] self-center justify-between  px-20">
+      <Link href="/" className="self-center">
         <Image src={logo} width={40} height={40} alt="logo" />
-        <div className="flex flex-row gap-[59px]  text-white self-center">
-          {NavigationItems.map(item => (
-            <NavItem key={item.label} {...item} />
-          ))}
-        </div>
+      </Link>
+      <div className="flex flex-row gap-[59px]  text-black self-center">
+        {NavigationItems.map(item => (
+          <NavItem key={item.label} {...item} />
+        ))}
       </div>
     </div>
   );

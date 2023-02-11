@@ -1,18 +1,20 @@
-import Brand from 'sections/brand';
-import Examples from 'sections/examples';
-import FAQ from 'sections/faq';
-import Tutorial from 'sections/tutorial';
-import Why from 'sections/why';
 import Layout from '../components/Layout';
+import Brand from 'sections/brand';
+import What from '@sections/what';
+import Why from 'sections/why';
+import Partner from '@sections/partner';
+import Talks from '@sections/talks';
+import Join from '@sections/join';
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Brand />
+      <What />
       <Why />
-      <FAQ />
-      <Examples />
-      <Tutorial />
-    </Layout>
+      <Partner />
+      <Talks />
+      <Join />
+    </>
   );
 }

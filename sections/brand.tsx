@@ -1,24 +1,30 @@
-import { SectionIDs } from '@utils/constants';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import illustration from '@assets/home_illustration.svg';
 
 export default function Brand() {
-  const handleClickStart = () => {
-    // TODO: jump
-  };
-
   return (
-    <div id={SectionIDs.brand} className="flex flex-col items-center justify-center py-3 mt-32">
-      <span className="gradient-title text-center">ERC-4337</span>
-      <span className="text-white text-lg mt-[27px] mb-[49px] w-[568px]">
-        Lorem ipsum dolor sit amet consectetur. Metus et commodo pellentesque{' '}
-      </span>
-      <Link
-        className="flex h-[40px] w-[170px] rounded-3xl bg-green hover:bg-[#57f0d4]"
-        onClick={handleClickStart}
-        href={'#tutorial'}>
-        <span className="text-grey text-xs font-bold text-center self-center  w-full">Getting Started</span>
-      </Link>
+    <div className="flex flex-row justify-between">
+      <div>
+        <h1 className="font-bold text-2xl mb-12">
+          ERC-4337: <br />
+          Account Abstraction
+        </h1>
+        <p className="max-w-2xl">
+          An account abstraction proposal which completely avoids the need for consensus-layer protocol changes. Instead
+          of adding new protocol features and changing the bottom-layer transaction type, this proposal introduces a
+          higher-layer pseudo-transaction object called a UserOperation. Users send UserOperation objects into a
+          separate mempool. Bundlers package up a set of these objects into a transaction making a handleOps() call to a
+          special contract, and that transaction then gets included in a block.
+        </p>
+
+        <div className="flex flex-row mt-10 gap-5">
+          <a className="button button-primary">Join Community</a>
+          <a className="button">Our Doc</a>
+        </div>
+      </div>
+      <Image src={illustration} alt="illustration" />
     </div>
   );
 }

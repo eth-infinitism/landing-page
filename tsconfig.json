@@ -19,7 +19,8 @@
       "@components*": ["components*"],
       "@utils*": ["utils*"],
       "@pages*": ["pages*"],
-      "@assets*": ["assets*"]
+      "@assets*": ["assets*"],
+      "@sections*": ["sections*"]
     },
     "plugins": [{ "name": "next" }]
   },
