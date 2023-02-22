@@ -20,7 +20,8 @@
       "@utils*": ["utils*"],
       "@pages*": ["pages*"],
       "@assets*": ["assets*"],
-      "@sections*": ["sections*"]
+      "@sections*": ["sections*"],
+      "@config*": ["config*"]
     },
     "plugins": [{ "name": "next" }]
   },

@@ -6,8 +6,9 @@ module.exports = {
     extend: {
       colors: {
         dark: '#282828',
-        green: '#67F2BE',
+        green: '#F8FFF6',
         grey: '#D9D9D9',
+        pink:'#FFF3F6'
       },
       fontSize: {
         xxs: ['12px', '14px'],

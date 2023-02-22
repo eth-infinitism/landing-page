@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { INavigationItem, NavigationItems } from '@utils/constants';
 import logo from '@assets/logo.svg';
+import { INavigationItem, NavigationItems } from '@configs/home/navigation';
 
 export const NavItem = ({ label, link }: INavigationItem) => {
   return (

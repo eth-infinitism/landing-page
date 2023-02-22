@@ -1,20 +1,20 @@
-import { IWhyItem, WhyItems } from '@utils/constants';
+import { IWhyItem, WhyItems } from '@configs/home/why';
 import Image from 'next/image';
 import React from 'react';
 
 const WhyItem = ({ title, description, image }: IWhyItem) => {
   return (
     <div className="flex flex-col items-center text-black text-center w-full">
-      <Image src={image} alt="" width={145} height={145} className="rounded-full mt-3 bg-gray-700" />
+      <Image src={image} alt="" width={145} height={145} className="rounded-full mt-3 " />
       <h1 className="font-bold text-base">{title}</h1>
-      <p className='text-xxs mt-2'>{description}</p>
+      <p className="text-xxs mt-2">{description}</p>
     </div>
   );
 };
 
 export default function Why() {
   return (
-    <div className="flex flex-row gap-20 items-center">
+    <section className="flex flex-row gap-20 items-center">
       <div className="max-w-md">
         <h1 className="title mb-14">Why ERC-4337?</h1>
         <p>
@@ -30,6 +30,6 @@ export default function Why() {
           <WhyItem {...item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

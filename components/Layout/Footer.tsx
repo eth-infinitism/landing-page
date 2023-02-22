@@ -1,8 +1,9 @@
-import { INavigationItem, ISocialItem, NavigationItems, SocialItems } from '@utils/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import logo from '@assets/logo.svg';
+import { INavigationItem, NavigationItems } from '@configs/home/navigation';
+import { ISocialItem, SocialItems } from '@configs/home/social';
 
 const LinkItem = ({ label, link }: INavigationItem) => (
   <Link className="text-black text-xs w-36 " href={link}>
@@ -18,7 +19,7 @@ const SocialItem = ({ icon, url }: ISocialItem) => (
 
 export default function Footer() {
   return (
-    <div className="bottom-0 h-22 border-t border-grey py-5 mt-28 px-20">
+    <div className="absolute w-full bottom-0 h-22 border-t border-grey py-5 px-20">
       <Image src={logo} width={40} height={40} alt="logo" />
 
       <div className="flex flex-row justify-between mt-6">

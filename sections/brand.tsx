@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import illustration from '@assets/home_illustration.svg';
 
 export default function Brand() {
   return (
-    <div className="flex flex-row justify-between">
+    <section className="flex flex-row justify-between">
       <div>
         <h1 className="font-bold text-2xl mb-12">
           ERC-4337: <br />
@@ -25,6 +24,6 @@ export default function Brand() {
         </div>
       </div>
       <Image src={illustration} alt="illustration" />
-    </div>
+    </section>
   );
 }
