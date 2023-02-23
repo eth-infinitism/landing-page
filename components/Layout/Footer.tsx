@@ -19,7 +19,7 @@ const SocialItem = ({ icon, url }: ISocialItem) => (
 
 export default function Footer() {
   return (
-    <div className="absolute w-full bottom-0 h-22 border-t border-grey py-5 px-20">
+    <div className="absolute w-full bottom-0 h-22 border-t border-grey py-5 px-20 bg-white">
       <Image src={logo} width={40} height={40} alt="logo" />
 
       <div className="flex flex-row justify-between mt-6">
