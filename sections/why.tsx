@@ -14,9 +14,9 @@ const WhyItem = ({ title, description, image }: IWhyItem) => {
 
 export default function Why() {
   return (
-    <section className="flex flex-row gap-20 items-center">
-      <div className="max-w-md">
-        <h1 className="title mb-14">Why ERC-4337?</h1>
+    <section className="block lg:flex flex-row gap-20 items-center text-center">
+      <div className="lg:max-w-md">
+        <h1 className="title mb-14 text-center">Why ERC-4337?</h1>
         <p>
           Co-authored by Vitalik Buterin, Yoav Weiss, Kristof Gazso, Namra Patel, Dror Tirosh, Shahaf Nacson and Tjaden
           Hess, ERC-4337 introduces account abstraction without any modifications to the core protocol. It achieves so
@@ -25,7 +25,7 @@ export default function Why() {
           a single transaction that gets included in the Ethereum chain.
         </p>
       </div>
-      <div className="w-full grid grid-cols-2 grid-rows-2 gap-y-6 gap-x-14">
+      <div className="w-full grid lg:grid-cols-2 lg:grid-rows-2 gap-y-6 gap-x-14">
         {WhyItems.map(item => (
           <WhyItem {...item} />
         ))}

@@ -5,7 +5,7 @@
 
 @layer components {
   .button {
-    @apply font-bold py-3 px-6 border border-black bg-white text-black rounded-3xl cursor-pointer;
+    @apply font-bold py-3 px-6 border border-black bg-white text-black rounded-3xl cursor-pointer text-center self-center min-w-fit;
   }
 
   .button:hover {
@@ -23,11 +23,16 @@
   .title {
     @apply font-bold text-xl;
   }
+
+  .horizon-layout {
+    @apply px-5 lg:px-20;
+  }
 }
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
   overscroll-behavior-y: none;
+  white-space: pre-wrap;
 }
 
 .note {

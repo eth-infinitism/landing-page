@@ -4,7 +4,7 @@ import illustration from '@assets/home_illustration.svg';
 
 export default function Brand() {
   return (
-    <section className="flex flex-row justify-between">
+    <section className="flex flex-row justify-between items-center">
       <div>
         <h1 className="font-bold text-2xl mb-12">
           ERC-4337: <br />
@@ -18,12 +18,12 @@ export default function Brand() {
           special contract, and that transaction then gets included in a block.
         </p>
 
-        <div className="flex flex-row mt-10 gap-5">
-          <a className="button button-primary">Join Community</a>
-          <a className="button">Our Doc</a>
+        <div className="flex flex-row mt-10 gap-4">
+          <a className="button w-full button-primary">Join Community</a>
+          <a className="button w-full h-full">Our Doc</a>
         </div>
       </div>
-      <Image src={illustration} alt="illustration" />
+      <Image src={illustration} alt="illustration" className='ml-8 h-[560px] hidden lg:block' />
     </section>
   );
 }

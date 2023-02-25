@@ -8,7 +8,7 @@ import Join from '@sections/join';
 
 export default function Home() {
   return (
-    <div className="mt-20 px-44 flex flex-col gap-y-56">
+    <div className="mt-20 flex flex-col gap-y-56 horizon-layout ">
       <Brand />
       <What />
       <Why />

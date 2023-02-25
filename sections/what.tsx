@@ -2,7 +2,7 @@ import React from 'react';
 
 const What = () => {
   return (
-    <section className="note w-full py-20 px-56 text-center">
+    <section className="note w-full py-14 px-12 xl:py-20 xl:px-56 text-center">
       <h1 className="title mb-6">What is Account Abstraction?</h1>
       <p>
         Account abstraction moves crypto from the current approach of a single EOA account, where one can lose

@@ -19,7 +19,7 @@ const SocialItem = ({ icon, url }: ISocialItem) => (
 
 export default function Footer() {
   return (
-    <div className="absolute w-full bottom-0 h-22 border-t border-grey py-5 px-20 bg-white">
+    <div className="absolute w-full bottom-0 h-22 border-t border-grey py-5 bg-white  horizon-layout">
       <Image src={logo} width={40} height={40} alt="logo" />
 
       <div className="flex flex-row justify-between mt-6">
@@ -36,7 +36,7 @@ export default function Footer() {
             ))}
           </div>
           {/* TODO: check this */}
-          <p className="text-slate-300 text-xs mt-5">© 2023 ETHGlobal. All Rights Reserved.</p>
+          <p className="text-slate-300 text-xxs mt-5">© 2023 ETHGlobal. All Rights Reserved.</p>
         </div>
       </div>
     </div>
