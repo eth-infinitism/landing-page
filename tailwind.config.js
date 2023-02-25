@@ -8,7 +8,8 @@ module.exports = {
         dark: '#282828',
         green: '#F8FFF6',
         grey: '#D9D9D9',
-        pink:'#FFF3F6'
+        pink: '#FFF3F6',
+        ['table-gray']: 'rgba(217, 217, 217, 0.19)',
       },
       fontSize: {
         xxs: ['12px', '14px'],
