@@ -1,5 +1,5 @@
-# eip 4337 landing page
-This is the frontend project of EIP 4377 Landing Page which based on Next.js.
+# ERC 4337 landing page
+This is the frontend project of the ERC-4337 Landing Page, based on Next.js.
 
 ## Development
 
