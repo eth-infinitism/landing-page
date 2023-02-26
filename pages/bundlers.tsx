@@ -1,7 +1,7 @@
 import PageHeader from '@components/PageHeader';
 import ResourceBlock from '@components/ResourceBlock';
 import Table, { IBundlerTestResult } from '@components/DashboardTable';
-import { bundlerResources } from '@configs/bunlders';
+import { bundlerResources } from '@configs/bundlers';
 import React from 'react';
 import pass_icon from '@assets/icons/pass.svg';
 import fail_icon from '@assets/icons/fail.svg';
