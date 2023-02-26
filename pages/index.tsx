@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import Brand from 'sections/brand';
 import What from '@sections/what';
 import Why from 'sections/why';

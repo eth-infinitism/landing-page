@@ -1,4 +1,4 @@
-import Footer from '@components/Layout/Footer';
+import Footer from '@components/layout/Footer';
 import { useRouter } from 'next/router';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 
