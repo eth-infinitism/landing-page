@@ -16,6 +16,7 @@
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
     "next": "13.0.1",
+    "next-compose-plugins": "^2.2.1",
     "nextra": "^2.2.14",
     "nextra-theme-docs": "^2.2.14",
     "react": "18.2.0",
