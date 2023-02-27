@@ -36,7 +36,7 @@ export default function Footer() {
             ))}
           </div>
           {/* TODO: check this */}
-          <p className="text-slate-300 text-xxs mt-5">© 2023 ETHGlobal. All Rights Reserved.</p>
+          <p className="text-slate-300 text-xxs mt-5">© 2023 Ethereum Foundation. All Rights Reserved.</p>
         </div>
       </div>
     </div>
