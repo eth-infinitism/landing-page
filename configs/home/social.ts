@@ -11,7 +11,7 @@ export interface ISocialItem {
 export const SocialItems = [
   {
     icon: twitter_icon,
-    url: 'https://github.com/eth-infinitism/account-abstraction', // TODO: change to twitter url
+    url: 'https://twitter.com/erc4337', 
   },
   {
     icon: github_icon,
@@ -19,6 +19,6 @@ export const SocialItems = [
   },
   {
     icon: discord_icon,
-    url: 'https://github.com/eth-infinitism/account-abstraction', // TODO: change to discord url
+    url: 'https://discord.gg/cXSpMUpWnC', 
   },
 ];
