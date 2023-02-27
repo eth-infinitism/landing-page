@@ -6,33 +6,33 @@ export interface ITalkItem {
 
 export const TalkItems: ITalkItem[] = [
   {
-    title: 'Account Abstraction',
-    subtitle: 'building an ERC-4337 wallet bala bala bala bala bala bala bala bala bala bala bala bala bala bala bala bala',
+    title: 'Account abstraction: building an ERC-4337 wallet',
+    subtitle: 'ETHBogotá',
     url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
   },
   {
-    title: 'Account Abstraction',
-    subtitle: 'building an ERC-4337 wallet',
-    url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
+    title: `What's new in ERC-4337?`,
+    subtitle: 'PEEPanEIP #100',
+    url: 'https://www.youtube.com/watch?v=CgXzDuN5Xqc',
   },
   {
-    title: 'Account Abstraction',
-    subtitle: 'building an ERC-4337 wallet',
-    url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
+    title: 'Account Abstraction: Making Accounts Smarter',
+    subtitle: 'Devcon Bogotá',
+    url: 'https://www.youtube.com/watch?v=HbNdGex47ks',
   },
   {
-    title: 'Account Abstraction',
-    subtitle: 'building an ERC-4337 wallet',
-    url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
+    title: 'Account Abstraction Panel',
+    subtitle: 'Devcon Bogotá',
+    url: 'https://www.youtube.com/watch?v=WsZBymiyT-8',
   },
   {
-    title: 'Account Abstraction',
-    subtitle: 'building an ERC-4337 wallet',
-    url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
+    title: 'ERC 4337: Account Abstraction via Alternative Mempool',
+    subtitle: 'ETHAmsterdam',
+    url: 'https://www.youtube.com/watch?v=eyT6WzJmWyc',
   },
   {
-    title: 'Account Abstraction',
-    subtitle: 'building an ERC-4337 wallet',
-    url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
+    title: 'Account Abstraction & EIP 4337 with Yoav Weiss ',
+    subtitle: 'Bankless Shows',
+    url: 'https://www.youtube.com/watch?v=lkcqVVNu0q8',
   },
 ];
