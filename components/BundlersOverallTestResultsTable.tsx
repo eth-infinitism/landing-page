@@ -19,7 +19,7 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
       const bundlerResult = results[bundlerName.bundlerName];
       if (bundlerResult) {
         return <td className="pl-5 text-center" key={bundlerName.bundlerName}>
-          <div className={`min-h-11 leading-[2.75rem] w-full flex flex-row items-center justify-center`}>
+          <div className={`min-h-11 leading-[2.75rem] w-full flex flex-row items-center justify-center ${Number(bundlerResult.totalErrors) > 0 ? (Number(bundlerResult.totalErrors) < 5 ? 'text-yellow-500' :  'text-red-500') : 'text-lime-500'}`}>
           {bundlerResult.totalErrors} / {bundlerResult.totalTests}
           </div>
           </td>;
