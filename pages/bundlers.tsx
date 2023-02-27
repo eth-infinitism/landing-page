@@ -1,97 +1,183 @@
+import { useEffect, useState } from 'react';
 import PageHeader from '@components/PageHeader';
 import ResourceBlock from '@components/ResourceBlock';
-import Table, { IBundlerTestResult } from '@components/DashboardTable';
 import { bundlerResources } from '@configs/bundlers';
 import React from 'react';
-import pass_icon from '@assets/icons/pass.svg';
-import fail_icon from '@assets/icons/fail.svg';
-import Image from 'next/image';
+import { IBundlerDisplayName, IBundlersTestResults, IBundlersTestResultsWrapper, IBundlerTestResults, IDisplayBundlersPerTestResults, IDisplayBundlersOverallTestResults, IDisplaySpecificBundlerPerTestResult, IDisplaySpecificBundlerOverallTestResult } from '@components/BundlersTableInterfaces';
+import BundlersOverallTestResultTable from '@components/BundlersOverallTestResultsTable';
+import BundlersPerTestResultsTable from '@components/BundlersPerTestResultsTable';
+import LoadingIndicator from '@components/LoadingIndicator';
 
-const mockData: IBundlerTestResult[] = [
-  {
-    name: 'AA Reference Bundler/0.4.0',
-    errors: '2',
-    failures: '0',
-    skipped: '1',
-    tests: '4',
-    time: '12.224123',
-    timestamp: '2023-02-09T20:45:59.604898',
-    hostname: 'fv-az567-272',
-    testcase: [
-      {
-        classname: '',
-        name: 'tests.bundle.test_stake_rules',
-        time: '0.000',
-        skipped: {
-          message: 'collection skipped',
-          '#text':
-            "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')",
-        },
-      },
-      {
-        classname: 'tests.opbanning.test_op_banning',
-        name: 'test_account_banned_opcode[GASPRICE]',
-        time: '0.205',
-      },
-      {
-        classname: 'tests.opbanning.test_op_banning',
-        name: 'test_paymaster_banned_opcode[GASPRICE]',
-        time: '0.252',
-      },
-      {
-        classname: 'tests.opbanning.test_op_banning',
-        name: 'test_factory_banned_opcode[GASPRICE]',
-        time: '0.388',
-      },
-    ],
-  },
-  {
-    name: 'Bundler/0.4.0',
-    errors: '1',
-    failures: '0',
-    skipped: '1',
-    tests: '43',
-    time: '12.224567',
-    timestamp: '2023-02-09T20:45:59.604898',
-    hostname: 'fv-az567-272',
-    testcase: [
-      {
-        classname: '',
-        name: 'tests.bundle.test_stake_rules',
-        time: '0.000',
-        skipped: {
-          message: 'collection skipped',
-          '#text':
-            "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')",
-        },
-      },
-    ],
-  },
-  {
-    name: 'stackup/0.1',
-    errors: '0',
-    failures: '0',
-    skipped: '0',
-    tests: '102',
-    time: '12.224567',
-    timestamp: '2023-02-09T20:45:59.604898',
-    hostname: 'fv-az567-272',
-    testcase: [
-      {
-        classname: '',
-        name: 'tests.bundle.test_stake_rules',
-        time: '0.000',
-        skipped: {
-          message: 'collection skipped',
-          '#text':
-            "('/home/runner/work/bundler-test-executor/bundler-test-executor/bundler-spec-tests/tests/bundle/test_stake_rules.py', 12, 'Skipped')",
-        },
-      },
-    ],
-  },
-];
+
+const ALL_HISTORY = 'https://bundler-test-results.eip4337.com/history/history.json';
+const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
+
+
+export function parseDateTime(dateTimeString: string): Date {
+  // Check if the input string has the correct length
+  if (dateTimeString.length !== 15) {
+    throw Error("invlid date input string");
+  }
+
+  // Extract the year, month, day, hour, minute, and second from the input string
+  const year = Number(dateTimeString.slice(0, 4));
+  const month = Number(dateTimeString.slice(4, 6)) - 1; // JavaScript Date months are zero-indexed
+  const day = Number(dateTimeString.slice(6, 8));
+  const hour = Number(dateTimeString.slice(9, 11));
+  const minute = Number(dateTimeString.slice(11, 13));
+  const second = Number(dateTimeString.slice(13));
+
+  // Create a new Date object with the extracted values
+  const dateTime = new Date(year, month, day, hour, minute, second);
+
+  // Check if the Date object is valid (i.e. the input string had valid values)
+  if (isNaN(dateTime.getTime())) {
+    throw Error("invlid date input string");
+  }
+
+  return dateTime;
+}
+
+function findLatestDateTimes(json: { [key: string]: any }, x: number): string[] | null {
+  const dateTimes: { dateTime: Date, key: string }[] = [];
+
+  for (const key in json) {
+    const dateTime = parseDateTime(key);
+    if (dateTime !== null) {
+      dateTimes.push({ dateTime, key });
+    }
+  }
+
+  if (dateTimes.length === 0) {
+    return null;
+  }
+
+  dateTimes.sort((a, b) => b.dateTime.getTime() - a.dateTime.getTime());
+
+  return dateTimes.slice(0, x).map(dt => dt.key);
+}
+
+function removeOldTestResults(latestTestResults: IDisplayBundlersOverallTestResults) {
+
+
+}
+
+
+function getLatestTestResults(data: IBundlersTestResults): IDisplayBundlersOverallTestResults {
+  const latestDates: string[] | null = findLatestDateTimes(data, NUMBER_OF_LATEST_TESTS_RESULTS);
+  if (!latestDates) {
+    throw Error("can't find latest test results");
+  }
+  const latestTestResults: IDisplayBundlersOverallTestResults = {};
+  latestDates.forEach((latestDate) => {
+    const dateTimeOfLatestTest = parseDateTime(latestDate);
+    if (!dateTimeOfLatestTest) throw Error("invalid date time");
+    if (dateTimeOfLatestTest < parseDateTime('20230223/192624')) return // first trial tests, lots of meaningless errors
+    const latestTest = data[latestDate];
+    Object.keys(latestTest).forEach(bundlerName => {
+      const latestTestResult: IDisplaySpecificBundlerOverallTestResult = {
+          name: latestTest[bundlerName].name,
+          totalTests: parseInt(latestTest[bundlerName].tests),
+          totalErrors: parseInt(latestTest[bundlerName].errors) + parseInt(latestTest[bundlerName].failures), // we treat skipped as successful tests
+        
+      }
+      if (!latestTestResults[latestDate]) latestTestResults[latestDate] = {};
+      latestTestResults[latestDate][bundlerName] = latestTestResult;
+    })
+  });
+  return latestTestResults;
+}
+
+function countBundlerNames(results: IBundlersTestResults): Record<string, number> {
+  const bundlerCounts: Record<string, number> = {};
+
+  // Iterate over the datetime entries
+  for (const dateTime in results) {
+    const wrappers = results[dateTime];
+
+    // Iterate over the bundler name entries in the current datetime entry
+    for (const bundlerName in wrappers) {
+      // Increment the count for the current bundler name, or initialize it to 1 if it hasn't appeared before
+      bundlerCounts[bundlerName] = (bundlerCounts[bundlerName] || 0) + 1;
+    }
+  }
+
+  return bundlerCounts;
+}
+
+function sortBundlersByCount(results: IBundlersTestResults): IBundlerDisplayName[] {
+  const bundlerCounts: Record<string, number> = countBundlerNames(results);
+
+  // Convert the bundlerCounts object into an array of [bundlerName, count] pairs
+  const bundlerCountsArray = Object.entries(bundlerCounts);
+
+  // Sort the array by count, with the highest count first
+  bundlerCountsArray.sort((a, b) => b[1] - a[1]);
+
+  // Extract just the bundler names from the sorted array
+  const sortedBundlerNames = bundlerCountsArray.map(([bundlerName, _]) => bundlerName);
+
+  // Create an array of IBundlerDisplayName objects sorted by count
+  const sortedBundlerDisplayNames: IBundlerDisplayName[] = [];
+  for (const bundlerName of sortedBundlerNames) {
+    const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName].name;
+    sortedBundlerDisplayNames.push({ bundlerName, bundlerDisplayName });
+  }
+
+  return sortedBundlerDisplayNames;
+}
+
+function getBundlersPerTestResults(data: IBundlersTestResults): IDisplayBundlersPerTestResults {
+  const bundlersPerTestResults: IDisplayBundlersPerTestResults = {};
+  const latestDate: string[] | null = findLatestDateTimes(data, 1);
+  if (!latestDate) {
+    throw Error("can't find latest test results");
+  }
+  const latestPerTestResultForAllBundlers: IBundlersTestResultsWrapper = data[latestDate[0]];
+
+  Object.keys(latestPerTestResultForAllBundlers).forEach(bundlerName => {
+    const bundlerTestResults: IBundlerTestResults = latestPerTestResultForAllBundlers[bundlerName];
+    Object.keys(bundlerTestResults.testcase).forEach((testcaseKey: string) => {
+      const testcase = bundlerTestResults.testcase[testcaseKey];
+      const specificBundlerPerTestResult: IDisplaySpecificBundlerPerTestResult = {
+        success: (testcase['failure'] || testcase['error']) ? false : true,
+      }
+      // we haven't seen this test case yet
+      if (!bundlersPerTestResults[testcase.name]) {
+        bundlersPerTestResults[testcase.name] = {};
+      }
+      bundlersPerTestResults[testcase.name][bundlerName]= specificBundlerPerTestResult;
+    })
+  })
+  return bundlersPerTestResults;
+
+}
+
 
 const bundlers = () => {
+
+  const [data, setData] = useState(null)
+  const [isLoading, setLoading] = useState(false)
+
+
+  useEffect(() => {
+    setLoading(true)
+    fetch(ALL_HISTORY)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data)
+        setLoading(false)
+      })
+  }, [])
+
+  if (isLoading) return <LoadingIndicator></LoadingIndicator>
+  if (!data) return <p>No profile data</p>
+
+  
+  const bundlersNames: IBundlerDisplayName[] = sortBundlersByCount(data);
+  const latestTestResults: IDisplayBundlersOverallTestResults = getLatestTestResults(data);
+  const bundlersPerTestResults: IDisplayBundlersPerTestResults = getBundlersPerTestResults(data);
+
   return (
     <div className="mt-28 px-20 flex flex-col pb-64 gap-y-28">
       <PageHeader
@@ -104,35 +190,8 @@ const bundlers = () => {
         <ResourceBlock label="TODO: mock name" sections={bundlerResources} />
       </div>
 
-      <Table
-        name={
-          <>
-            Bundler CTS (Compatibility Test Suite)
-            <br />
-            results dashboard
-          </>
-        }
-        columnKey={'name'}
-        data={mockData}
-        cellRender={({ errors, tests }: IBundlerTestResult) => (
-          <>
-            {tests} / <span className={`${Number(errors) === 0 ? 'text-lime-500' : 'text-red-500'}`}>{errors}</span>
-          </>
-        )}
-      />
-
-      <Table
-        name="Per-test result of latest run"
-        data={mockData}
-        columnKey="name"
-        cellRender={({ skipped, failures, errors }) => (
-          <Image
-            src={skipped === '0' && failures === '0' && errors === '0' ? pass_icon : fail_icon}
-            alt=""
-            className="py-8"
-          />
-        )}
-      />
+      <BundlersOverallTestResultTable bundlersNames={bundlersNames} latestResults={latestTestResults} />
+      <BundlersPerTestResultsTable bundlersNames={bundlersNames} bundlersPerTestResults={bundlersPerTestResults} />;      
     </div>
   );
 };
