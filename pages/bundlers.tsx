@@ -179,7 +179,7 @@ const bundlers = () => {
   const bundlersPerTestResults: IDisplayBundlersPerTestResults = getBundlersPerTestResults(data);
 
   return (
-    <div className="mt-28 px-20 flex flex-col pb-64 gap-y-28">
+    <div className="mt-28 flex flex-col pb-64 gap-y-28 horizon-layout">
       <PageHeader
         name="Bundlers"
         description="Provide an in-depth explanation of bundlers, which batch multiple UserOps into a single transaction. The page
