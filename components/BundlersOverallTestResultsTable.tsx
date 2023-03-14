@@ -55,15 +55,13 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
 
   return (
     <div>
-      <caption className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-12">
-        <>
-          Bundler CTS (Compatibility Test Suite)
-          <br />
-          results dashboard
-        </>
-      </caption>
+      <h1 className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-12">
+        Bundler CTS (Compatibility Test Suite)
+        <br />
+        results dashboard
+      </h1>
       <div className="overflow-x-scroll">
-        <table className="border-spacing-0 min-w-max">
+        <table className="border-spacing-0 w-full">
           <thead>
             <tr className="min-w-[1090px] overflow-x-scroll">
               <th className="table-cell align-middle"></th>

@@ -12,11 +12,11 @@ const BundlersPerTestResultsTable: React.FC<IProps> = ({
 }) => {
   return (
     <div>
-      <caption className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-12 min-w-[400px]">
+      <h1 className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-12">
         Per-test result of latest run
-      </caption>
+      </h1>
       <div className='overflow-x-scroll'>
-        <table className="border-spacing-0">
+        <table className="border-spacing-0 w-full">
           <thead>
             <tr>
               <th className="table-cell align-middle">Test Name</th>
