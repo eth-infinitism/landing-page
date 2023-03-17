@@ -33,7 +33,7 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
     });
 
     return (
-      <tr className="min-h-11 border-b border-black" key={datetime}>
+      <tr className="min-h-11 w-1/3 border-b border-black" key={datetime}>
         <th>{parseDateTime(datetime).toLocaleDateString()}, {parseDateTime(datetime).toLocaleTimeString()}</th>
         {cells}
       </tr>
@@ -42,14 +42,20 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
 
   return (
     <table className="border-spacing-0">
-      <caption className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-12"><>
+      <caption className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-6">
         Bundler CTS (Compatibility Test Suite)
         <br />
         results dashboard
-      </> </caption>
+      </caption>
+      <caption className="font-bold text-m border-black pl-3 text-left mb-12">
+        An historical overview of all ERC-4337 bundlers - how many errors does each bundler throw every time the official tests suite has been run
+      </caption>
       <thead>
         <tr>
-          <th className="table-cell align-middle"></th>
+        <th className="min-h-11 w-1/3 table-cell align-middle">
+        <div className="ml-5 leading-[6rem] h-24 border-t border-l border-r border-b-8 border-black rounded-t-2xl">Test Date</div>
+          </th>
+          
           {columns}
         </tr>
       </thead>
