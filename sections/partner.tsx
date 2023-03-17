@@ -4,8 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 
 const PartnerItem = ({ logo, link }: IPartnerItem) => (
-  <Link href={link}>
-    <Image src={logo} alt="logo" width={237} height={76} className="shadow-sm" />
+  <Link href={link} target="_blank" rel="noopener noreferrer">    
+      <Image src={logo} alt="logo" width={100} height={100} className="shadow-sm" />
   </Link>
 );
 
@@ -14,8 +14,8 @@ const Partner = () => (
     <div className="absolute -left-44 -top-1/2 w-[2000px] h-96  -z-10 bg-pink -skew-y-6" />
     <div className="absolute -left-44 -top-1/2 w-[2000px] h-[1500px]  -z-20 bg-green skew-y-6 overflow-visible" />
 
-    <h1 className="title">Our ecosystem Partners</h1>
-    <div className="w-full flex flex-wrap gap-y-4 flex-row justify-evenly mt-20">
+    <h1 className="title">Members of the 4337 Revolution</h1>
+    <div className="w-full flex flex-wrap gap-y-4 gap-x-4 flex-row justify-evenly mt-20">
       {PartnerItems.map(item => (
         <PartnerItem {...item} />
       ))}
