@@ -4,9 +4,9 @@ import { DocsThemeConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
   darkMode: false,
-  logo: <strong>ERC 4337 Documentations</strong>,
+  logo: <strong>ERC-4337 Documentation</strong>,
   project: {
-    link: 'https://github.com/eth-infinitism/account-abstraction', // TODO: check it
+    link: 'https://github.com/eth-infinitism/account-abstraction', 
   },
   docsRepositoryBase: 'https://github.com/eth-infinitism/landing-page',
   nextThemes: {
@@ -16,7 +16,7 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter();
     if (asPath !== '/') {
       return {
-        titleTemplate: '%s – ERC 4337 Documentations',
+        titleTemplate: '%s – ERC 4337 Documentation',
       } as any;
     }
   },
