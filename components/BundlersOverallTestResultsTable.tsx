@@ -10,7 +10,7 @@ interface IProps {
 const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, latestResults }) => {
   const columns = bundlersNames.map((bundlerName: IBundlerDisplayName) => (
     <th key={bundlerName.bundlerName}>
-      <div className="ml-5 leading-[6rem] h-24 bg-black rounded-t-2xl text-white min-w-max px-4">
+      <div className="ml-5 leading-[4rem] h-16 bg-black rounded-t-2xl text-white min-w-max px-4">
         {bundlerName.bundlerDisplayName}
       </div>
     </th>
@@ -23,7 +23,7 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
         return (
           <td className="pl-5 text-center" key={bundlerName.bundlerName}>
             <div
-              className={`min-h-11 leading-[2.75rem] w-full flex flex-row items-center justify-center ${
+              className={`min-h-11 leading-[2rem] w-full flex flex-row items-center justify-center ${
                 Number(bundlerResult.totalErrors) > 0
                   ? Number(bundlerResult.totalErrors) < 5
                     ? 'text-yellow-500'
@@ -37,7 +37,7 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
       } else {
         return (
           <td className="pl-5 text-center" key={bundlerName.bundlerName}>
-            <div className={`min-h-11 leading-[2.75rem] w-full flex flex-row items-center justify-center`}>N/A</div>
+            <div className={`min-h-11 leading-[2rem] w-full flex flex-row items-center justify-center`}>N/A</div>
           </td>
         );
       }
