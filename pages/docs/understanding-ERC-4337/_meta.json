@@ -1,0 +1,8 @@
+{
+  "architecture": "Architecture",
+  "user-operation": "UserOperation",
+  "entry-point-contract": "EntryPoint contract",
+  "account-contract": "Account contract",
+  "account-factory-contract": "Account Factory contract",
+  "simple-account": "SimpleAccount.sol"
+}

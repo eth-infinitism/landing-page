@@ -2,7 +2,7 @@ import React from 'react';
 import ResourceBlock from '@components/ResourceBlock';
 import { Articles } from '@configs/resources/article';
 import { Tutorials } from '@configs/resources/tutorial';
-import { Tools } from '@configs/resources/tool';
+import { Code } from '@configs/resources/code';
 import PageHeader from '@components/PageHeader';
 
 const resources = () => {
@@ -15,9 +15,11 @@ const resources = () => {
 
       <ResourceBlock label="Articles" sections={Articles} />
 
+      <ResourceBlock label="Code" sections={Code} />
+
       <ResourceBlock label="Tutorials" sections={Tutorials} />
 
-      <ResourceBlock label="Tutorials" sections={Tools} />
+      
     </div>
   );
 };

@@ -10,10 +10,15 @@ import soulwallet_icon from '@assets/logos/soul_wallet.jpeg';
 import polygon_icon from '@assets/logos/polygon.jpeg';
 import arbitrum_icon from '@assets/logos/arbitrum.jpeg';
 import base_icon from '@assets/logos/base.jpeg';
-import gnosis_chain_icon from '@assets/logos/gnosis_chain.jpeg';
-import safe_icon from '@assets/logos/safe.jpeg';
+import gnosis_chain_icon from '@assets/logos/gnosis_chain.png';
+import safe_icon from '@assets/logos/safe.jpg';
 import optimism_icon from '@assets/logos/optimism.jpeg';
-import starkware_icon from '@assets/logos/starkware.jpeg';
+import starkware_icon from '@assets/logos/starkware.png';
+import argent_icon from '@assets/logos/argent.jpeg';
+import candide_wallet_icon from '@assets/logos/candide_wallet.jpeg';
+import thirdweb_icon from '@assets/logos/thirdweb.jpeg';
+import walletconnect_icon from '@assets/logos/walletconnect.png';
+import zerodev_icon from '@assets/logos/zerodev.jpeg';
 
 export interface IPartnerItem {
   logo: StaticImageData | string;
@@ -80,5 +85,25 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: starkware_icon,
     link: 'https://starkware.co/',
+  },
+  {
+    logo: argent_icon,
+    link: 'https://www.argent.xyz/',
+  },
+  {
+    logo: candide_wallet_icon,
+    link: 'https://www.candidewallet.com/',
+  },
+  {
+    logo: thirdweb_icon,
+    link: 'https://thirdweb.com/',
+  },
+  {
+    logo: walletconnect_icon,
+    link: 'https://walletconnect.com/',
+  },
+  {
+    logo: zerodev_icon,
+    link: 'https://zerodev.app/',
   },
 ];

@@ -31,8 +31,13 @@ export const TalkItems: ITalkItem[] = [
     url: 'https://www.youtube.com/watch?v=eyT6WzJmWyc',
   },
   {
-    title: 'Account Abstraction & EIP 4337 with Yoav Weiss ',
+    title: 'Account Abstraction & EIP 4337 with Yoav Weiss',
     subtitle: 'Bankless Shows',
     url: 'https://www.youtube.com/watch?v=lkcqVVNu0q8',
+  },
+  {
+    title: 'Account Abstraction and the future of custody',
+    subtitle: `Building Blocks'23 TLV`,
+    url: 'https://www.youtube.com/watch?v=BoI5OgZ_dXk',
   },
 ];

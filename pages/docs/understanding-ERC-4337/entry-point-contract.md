@@ -1,0 +1,2 @@
+# EntryPoint Contract
+The EntryPoint contract (which also includes a couple of others, such as StakeManager) is a singleton.  There should only be one implementation because only one instance should exist on each chain.
