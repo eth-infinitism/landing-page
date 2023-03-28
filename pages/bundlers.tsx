@@ -182,14 +182,8 @@ const bundlers = () => {
     <div className="mt-28 flex flex-col pb-64 gap-y-28 horizon-layout">
       <PageHeader
         name="Bundlers"
-        description="Provide an in-depth explanation of bundlers, which batch multiple UserOps into a single transaction. The page
-          will include examples and use cases for bundlers, as well as information on how to implement them in projects."
+        description="A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of UserOperations and get the transaction included on-chain."
       />
-
-      <div className="bg-[#FFFBF3] -mx-20 px-20 py-10">
-        <ResourceBlock label="TODO: mock name" sections={bundlerResources} />
-      </div>
-
       <BundlersOverallTestResultTable bundlersNames={bundlersNames} latestResults={latestTestResults} />
       <BundlersPerTestResultsTable bundlersNames={bundlersNames} bundlersPerTestResults={bundlersPerTestResults} />;      
     </div>
