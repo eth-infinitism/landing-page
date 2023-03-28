@@ -22,7 +22,7 @@ const BundlersPerTestResultsTable: React.FC<IProps> = ({
               <th className="table-cell align-middle">Test Name</th>
               {bundlerDisplayNames.map(displayName => (
                 <th key={displayName.bundlerName}>
-                  <div className="ml-5 leading-[6rem] h-24 bg-black rounded-t-2xl text-white min-w-max px-4">
+                  <div className="ml-5 leading-[4rem] h-16 bg-black rounded-t-2xl text-white min-w-max px-4">
                     {displayName.bundlerDisplayName}
                   </div>
                 </th>
@@ -35,7 +35,7 @@ const BundlersPerTestResultsTable: React.FC<IProps> = ({
                 <td className="pl-5 text-center">{testName}</td>
                 {bundlerDisplayNames.map(displayName => (
                   <td className="pl-5 text-center" key={displayName.bundlerName}>
-                    <div className={`min-h-11 leading-[2.75rem] w-full flex flex-row items-center justify-center`}>
+                    <div className={`leading-[2rem] w-full flex flex-row items-center justify-center`}>
                       {bundlerPerTestResult[displayName.bundlerName]?.success ? '✅' : '❌'}
                     </div>
                   </td>
