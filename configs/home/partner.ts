@@ -19,6 +19,14 @@ import candide_wallet_icon from '@assets/logos/candide_wallet.jpeg';
 import thirdweb_icon from '@assets/logos/thirdweb.jpeg';
 import walletconnect_icon from '@assets/logos/walletconnect.png';
 import zerodev_icon from '@assets/logos/zerodev.jpeg';
+import pimlico_icon from '@assets/logos/pimlico.jpeg';
+import avalanche_icon from '@assets/logos/avalanche.png';
+import blocknative_icon from '@assets/logos/blocknative.jpeg';
+import etherspot_icon from '@assets/logos/etherspot.jpeg';
+import infura_icon from '@assets/logos/infura.jpeg';
+import metamask_icon from '@assets/logos/metamask.jpeg';
+
+
 
 export interface IPartnerItem {
   logo: StaticImageData | string;
@@ -45,6 +53,26 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: alchemy_icon,
     link: 'https://www.alchemy.com/',
+  },
+  {
+    logo: avalanche_icon,
+    link: 'https://www.avax.com/',
+  },
+  {
+    logo: infura_icon,
+    link: 'https://www.infura.io/',
+  },
+  {
+    logo: metamask_icon,
+    link: 'https://metamask.io/',
+  },
+  {
+    logo: etherspot_icon,
+    link: 'https://etherspot.io/',
+  },
+  {
+    logo: blocknative_icon,
+    link: 'https://www.blocknative.com/',
   },
   {
     logo: biconomy_icon,
@@ -105,5 +133,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: zerodev_icon,
     link: 'https://zerodev.app/',
+  },
+  {
+    logo: pimlico_icon,
+    link: 'https://pimlico.io/',
   },
 ];
