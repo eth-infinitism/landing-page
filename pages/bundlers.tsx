@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import PageHeader from '@components/PageHeader';
-import ResourceBlock from '@components/ResourceBlock';
-import { bundlerResources } from '@configs/bundlers';
 import React from 'react';
 import { IBundlerDisplayName, IBundlersTestResults, IBundlersTestResultsWrapper, IBundlerTestResults, IDisplayBundlersPerTestResults, IDisplayBundlersOverallTestResults, IDisplaySpecificBundlerPerTestResult, IDisplaySpecificBundlerOverallTestResult } from '@components/BundlersTableInterfaces';
 import BundlersOverallTestResultTable from '@components/BundlersOverallTestResultsTable';

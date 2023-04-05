@@ -18,7 +18,7 @@ export default function Why() {
       <div className="lg:max-w-md">
         <h1 className="title mb-14 text-center">Why ERC-4337?</h1>
         <p className="mb-4">
-          Co-authored by Vitalik Buterin, Yoav Weiss, Kristof Gazso, Namra Patel, Dror Tirosh, Shahaf Nacson and Tjaden
+          Co-authored by Vitalik Buterin, Yoav Weiss, Kristof Gazso, Dror Tirosh, Shahaf Nacson and Tjaden
           Hess, ERC-4337 introduces account abstraction without any modifications to the core protocol. It achieves so
           by replicating the functionality of the transactions mempool in a higher-level system. However, instead of
           transactions, users send UserOperation objects to Ethereum nodes, and they package a set of these objects into
@@ -26,12 +26,12 @@ export default function Why() {
         </p>
         <p className="mb-4">
           Through ERC-4337 Account Abstraction is becoming widespread! Join the numerous projects in the ecosystem 
-          that understand that if we want to onboard the next billion users, accounts can't always be forced to choose between
-          security and usabilty - must offer users both.
+          that understand that if we want to onboard the next billion users, accounts can't be forced to choose between
+          security and usabilty - they must offer users both.
         </p>
         <p>
-          ERC-4337 takes usability even one step further by introducing paymasters. This mechanism enables users to either pay gas 
-          fees using ERC-20 tokens instead of ETH or to rely on a third party to sponsor their gas fees altogether, all in a decentralized fashion.
+          ERC-4337 takes usability even one step further by introducing paymasters. This decentralized mechanism enables users to pay gas 
+          fees using ERC-20 tokens instead of ETH or request a third party to sponsor their gas fees altogether.
         </p>
       </div>
       <div className="w-full grid lg:grid-cols-2 lg:grid-rows-2 gap-y-6 gap-x-14">

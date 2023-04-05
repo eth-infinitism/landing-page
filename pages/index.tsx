@@ -3,7 +3,7 @@ import Brand from 'sections/brand';
 import What from '@sections/what';
 import Why from 'sections/why';
 import Partner from '@sections/partner';
-import Talks from '@sections/talks';
+import Media from '@sections/media';
 import Join from '@sections/join';
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <What />
       <Why />
       <Partner />
-      <Talks />
+      <Media />
       <Join />
     </div>
   );

@@ -13,9 +13,9 @@ const resources = () => {
         description="A curated list of resources dedicated to Account Abstraction. list lots of useful resources (videos, tutorials, tools, etc.)"
       />
 
-      <ResourceBlock label="Articles" sections={Articles} />
-
       <ResourceBlock label="Code" sections={Code} />
+      
+      <ResourceBlock label="Articles" sections={Articles} />
 
       <ResourceBlock label="Tutorials" sections={Tutorials} />
 
