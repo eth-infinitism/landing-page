@@ -36,7 +36,7 @@ export default function Why() {
       </div>
       <div className="w-full grid lg:grid-cols-2 lg:grid-rows-2 gap-y-6 gap-x-14">
         {WhyItems.map(item => (
-          <WhyItem {...item} />
+          <WhyItem key={item.title} {...item} />
         ))}
       </div>
     </section>

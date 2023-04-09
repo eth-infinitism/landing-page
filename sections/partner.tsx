@@ -17,7 +17,7 @@ const Partner = () => (
     <h1 className="title">Members of the 4337 Revolution</h1>
     <div className="mx-auto w-2/3 flex flex-wrap gap-y-12 gap-x-12 flex-row justify-evenly mt-20">
       {PartnerItems.map(item => (
-        <PartnerItem {...item} />
+        <PartnerItem key={item.link} {...item} />
       ))}
     </div>
   </section>

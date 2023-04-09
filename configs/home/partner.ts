@@ -25,6 +25,7 @@ import blocknative_icon from '@assets/logos/blocknative.jpeg';
 import etherspot_icon from '@assets/logos/etherspot.jpeg';
 import infura_icon from '@assets/logos/infura.jpeg';
 import metamask_icon from '@assets/logos/metamask.jpeg';
+import ambire_icon from '@assets/logos/ambire.jpeg';
 
 
 
@@ -138,4 +139,8 @@ export const PartnerItems: IPartnerItem[] = [
     logo: pimlico_icon,
     link: 'https://pimlico.io/',
   },
+  {
+    logo: ambire_icon,
+    link: 'https://www.ambire.com/',
+  },  
 ];
