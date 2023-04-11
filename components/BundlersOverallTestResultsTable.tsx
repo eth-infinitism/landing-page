@@ -56,9 +56,7 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
   return (
     <div>
       <h1 className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-12">
-        Bundler CTS (Compatibility Test Suite)
-        <br />
-        results dashboard
+        Overall results of last 10 runs
       </h1>
       <div className="overflow-x-scroll">
         <table className="border-spacing-0 w-full">
@@ -73,6 +71,6 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
       </div>
     </div>
   );
-};
+}
 
 export default BundlersOverallTestResultTable;

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import PageHeader from '@components/PageHeader';
 import React from 'react';
+import ResourceBlock from '@components/ResourceBlock';
+import { bundlerResources } from '@configs/bundlers';
 import { IBundlerDisplayName, IBundlersTestResults, IBundlersTestResultsWrapper, IBundlerTestResults, IDisplayBundlersPerTestResults, IDisplayBundlersOverallTestResults, IDisplaySpecificBundlerPerTestResult, IDisplaySpecificBundlerOverallTestResult } from '@components/BundlersTableInterfaces';
 import BundlersOverallTestResultTable from '@components/BundlersOverallTestResultsTable';
 import BundlersPerTestResultsTable from '@components/BundlersPerTestResultsTable';
@@ -179,11 +181,16 @@ const bundlers = () => {
   return (
     <div className="mt-28 flex flex-col pb-64 gap-y-28 horizon-layout">
       <PageHeader
-        name="Bundlers"
-        description="A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of UserOperations and get the transaction included on-chain."
+        name='Bundler CTS (Compatibility Test Suite) results dashboard'
+        description='A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of UserOperations and get the transaction included on-chain.'
+        moreDescription='This page presents an overview of the test coverage results all open source bundlers in the ecosystem. Useful information about the test suite, bundler specs and more can be found in the section at the bottom'
       />
+
       <BundlersOverallTestResultTable bundlersNames={bundlersNames} latestResults={latestTestResults} />
-      <BundlersPerTestResultsTable bundlersNames={bundlersNames} bundlersPerTestResults={bundlersPerTestResults} />;      
+      <BundlersPerTestResultsTable bundlersNames={bundlersNames} bundlersPerTestResults={bundlersPerTestResults} />      
+      <div className="bg-[#FFFBF3] -mx-20 px-20 py-10">
+        <ResourceBlock label="Resources" sections={bundlerResources} />
+      </div>
     </div>
   );
 };

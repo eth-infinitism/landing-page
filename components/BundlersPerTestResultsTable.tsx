@@ -47,6 +47,6 @@ const BundlersPerTestResultsTable: React.FC<IProps> = ({
       </div>
     </div>
   );
-};
+}
 
 export default BundlersPerTestResultsTable;

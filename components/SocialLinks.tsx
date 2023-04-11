@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaTwitter, FaTelegramPlane, FaDiscord, FaStackExchange } from 'react-icons/fa';
+import Image from 'next/image'
+import mirrorImage from '@assets/icons/mirror.png'
 
 
 
@@ -24,6 +26,17 @@ const SocialLinks = () => {
         <FaDiscord size="2.5em" />
           <span>Infinitism</span>
         </a>
+        <a
+          href="https://mirror.xyz/erc4337official.eth"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
+        >
+        <div style={{ height: '2.5em', width: '2.5em' }}>
+        <Image src={mirrorImage} alt="Mirror.xyz" height="100%" width="100%" />
+        </div>
+          <span>Mirror.xyz</span>
+        </a>        
         <a
           href="https://twitter.com/4337Mafia"
           target="_blank"

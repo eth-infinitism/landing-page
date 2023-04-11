@@ -2,24 +2,57 @@ import { IResourceSection } from '@configs/type';
 
 export const bundlerResources: IResourceSection[] = [
   {
-    sectionName: 'Prerequisites',
+    sectionName: 'Specifications',
     resources: [
       {
-        name: 'Ethereum Accounts',
-        url: 'https://medium.com/coinmonks/account-abstraction-a-new-paradigm-for-smart-contracts-6b5b9f1f1f0',
+        name: 'API Specification',
+        url: 'https://github.com/eth-infinitism/bundler-spec',
       },
+      {
+        name: 'Compatibility tests',
+        url: 'https://github.com/eth-infinitism/bundler-spec-tests',
+      },
+      {
+        name: 'Tests results',
+        url: 'https://github.com/eth-infinitism/bundler-test-results',
+      },
+      
     ],
   },
   {
-    sectionName: 'Installation',
-    resources: [
+    sectionName: 'Bundlers',
+    resources: [      
       {
-        name: 'The History and Future of Account Abstraction by Nethermind',
-        url: 'https://medium.com/coinmonks/account-abstraction-a-new-paradigm-for-smart-contracts-6b5b9f1f1f0',
+        name: 'AA-Reference-Bundler/0.5.0',
+        url: 'https://github.com/eth-infinitism/bundler',
       },
       {
-        name: 'Primer on AA by Argent',
-        url: 'https://medium.com/coinmonks/account-abstraction-a-new-paradigm-for-smart-contracts-6b5b9f1f1f0',
+        name: 'Stackup Bundler',
+        url: 'https://github.com/stackup-wallet/stackup-bundler',
+      },
+      {
+        name: 'aa-bundler in Rust',
+        url: 'https://github.com/Vid201/aa-bundler/',
+      },
+      {
+        name: 'Skandha Bundler',
+        url: 'https://github.com/etherspot/skandha',
+      },
+      {
+        name: 'Voltaire-Bundler',
+        url: 'https://github.com/candidelabs/voltaire',
+      },
+      
+      
+
+    ],
+  },
+  {
+    sectionName: 'Articles',
+    resources: [      
+      {
+        name: 'Unified ERC-4337 mempool',
+        url: 'https://notes.ethereum.org/@yoav/unified-erc-4337-mempool',
       },
     ],
   },
