@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  publicRuntimeConfig: {
-    baseUrl: '/assets',
-  },
 };
 const withPlugins = require('next-compose-plugins');
 const withNextra = require('nextra')({
@@ -12,8 +9,5 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
   ...nextConfig,
 });
-
-
-
 
 module.exports = async (phase) => withPlugins([withNextra], nextConfig)(phase, { undefined });

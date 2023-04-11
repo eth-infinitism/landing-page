@@ -1,8 +1,3 @@
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
-const baseUrl = publicRuntimeConfig.baseUrl;
-
 export default {
     openGraph: {
         title: 'ERC-4337',
@@ -13,7 +8,7 @@ export default {
         siteName: 'ERC-4337',
         images: [
             {
-                url: `${baseUrl}/og-erc-4337.jpeg`,
+                url: `/og-erc-4337.jpeg`,
                 width: 1200,
                 height: 630,
                 alt: 'ERC-4337',
