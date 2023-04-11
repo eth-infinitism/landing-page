@@ -71,3 +71,10 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.hero-section {
+  background-image: url('/account-abstraction-hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
