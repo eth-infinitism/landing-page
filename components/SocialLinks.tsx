@@ -33,7 +33,7 @@ const SocialLinks = () => {
           className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
         >
         <div style={{ height: '2.5em', width: '2.5em' }}>
-        <Image src={mirrorImage} alt="Mirror.xyz" height="100%" width="100%" />
+        <Image src={mirrorImage} alt="Mirror.xyz" />
         </div>
           <span>Mirror.xyz</span>
         </a>        
