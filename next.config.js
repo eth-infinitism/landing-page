@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  publicRuntimeConfig: {
+    baseUrl: '/assets',
+  },
 };
 const withPlugins = require('next-compose-plugins');
 const withNextra = require('nextra')({
