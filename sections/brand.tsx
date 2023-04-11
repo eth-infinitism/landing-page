@@ -3,7 +3,7 @@ import React from 'react';
 export default function Brand() {
   return (
     <section className="flex flex-row justify-between items-center">
-        <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '40px 20px', borderRadius: '10px' }}>
+        <div className="p-12 bg-white/[0.7] rounded-3xl">
         <div>
           <h1 className="font-bold text-2xl mb-12">
             ERC-4337: <br />
