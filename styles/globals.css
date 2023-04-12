@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@layer components {
+  .button {
+    @apply font-bold py-3 px-6 border border-black bg-white text-black rounded-3xl cursor-pointer text-center self-center min-w-fit;
+  }
+
+  .button:hover {
+    @apply backdrop-brightness-90;
+  }
+
+  .button-primary {
+    @apply bg-black text-white;
+  }
+
+  .button-primary:hover {
+    @apply brightness-90;
+  }
+
+  .title {
+    @apply font-bold text-xl;
+  }
+
+  .horizon-layout {
+    @apply px-5 lg:px-20;
+  }
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  overscroll-behavior-y: none;
+  white-space: pre-wrap;
+}
+
+.note {
+  background: #fff7e4;
+  box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  border-top-color: #0080ff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-section {
+  background-image: url('/account-abstraction-hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
