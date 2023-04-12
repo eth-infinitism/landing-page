@@ -26,7 +26,7 @@ import etherspot_icon from '@assets/logos/etherspot.jpeg';
 import infura_icon from '@assets/logos/infura.jpeg';
 import metamask_icon from '@assets/logos/metamask.jpeg';
 import ambire_icon from '@assets/logos/ambire.jpeg';
-
+import cartridge_icon from '@assets/logos/cartridge.jpeg';
 
 
 export interface IPartnerItem {
@@ -142,5 +142,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: ambire_icon,
     link: 'https://www.ambire.com/',
+  }, 
+  {
+    logo: cartridge_icon,
+    link: 'https://cartridge.gg/',
   },  
 ];

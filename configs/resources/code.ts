@@ -16,43 +16,43 @@ export const Code: IResourceSection[] = [
     resources: [
       {
         name: "0xpass/0xpass",
-        url: "`https://github.com/0xpass/0xpass`",
+        url: `https://github.com/0xpass/0xpass`,
       },
       {
         name: "argentlabs/argent-x",
-        url: "`https://github.com/argentlabs/argent-x`",
+        url: `https://github.com/argentlabs/argent-x`,
       },
       {
         name: "bcnmy/biconomy-client-sdk",
-        url: "`https://github.com/bcnmy/biconomy-client-sdk`",
+        url: `https://github.com/bcnmy/biconomy-client-sdk`,
       },
       {
         name: "cupcakes-3/sdk",
-        url: "`https://github.com/cupcakes-3/sdk`",
+        url: `https://github.com/cupcakes-3/sdk`,
       },
       {
         name: "eth-infinitism/bundler",
-        url: "`https://github.com/eth-infinitism/bundler`",
+        url: `https://github.com/eth-infinitism/bundler`,
       },
       {
         name: "porco-rosso-j/zksync-aa-wallet-paymaster",
-        url: "`https://github.com/porco-rosso-j/zksync-aa-wallet-paymaster`",
+        url: `https://github.com/porco-rosso-j/zksync-aa-wallet-paymaster`,
       },
       {
         name: "zerodevapp/core",
-        url: "`https://github.com/zerodevapp/core`",
+        url: `https://github.com/zerodevapp/core`,
       },
       {
         name: "etherspot-sdk",
-        url: "`https://github.com/etherspot/etherspot-sdk`",
+        url: `https://github.com/etherspot/etherspot-sdk`,
       },
       {
         name: "web3well/easy-web3",
-        url: "`https://github.com/web3well/easy-web3`",
+        url: `https://github.com/web3well/easy-web3`,
       },
       {
         name: "safe-global/safe-core-sdk",
-        url: "`https://github.com/safe-global/safe-core-sdk`",
+        url: `https://github.com/safe-global/safe-core-sdk`,
       },
     ],
   },
@@ -61,43 +61,43 @@ export const Code: IResourceSection[] = [
     resources: [
       {
         name: "Ambire Wallet",
-        url: "`https://github.com/AmbireTech/wallet/tree/development/contracts`",
+        url: `https://github.com/AmbireTech/wallet/tree/development/contracts`,
       },
       {
         name: "Biconomy",
-        url: "`https://github.com/bcnmy/scw-contracts`",
+        url: `https://github.com/bcnmy/scw-contracts`,
       },
       {
         name: "BLS Wallet",
-        url: "`https://github.com/web3well/bls-wallet/tree/main/contracts`",
+        url: `https://github.com/web3well/bls-wallet/tree/main/contracts`,
       },
       {
         name: "Candide Wallet",
-        url: "`https://github.com/candidelabs/CandideWalletContracts`",
+        url: `https://github.com/candidelabs/CandideWalletContracts`,
       },
       {
         name: "Infinitism",
-        url: "`https://github.com/eth-infinitism/account-abstraction`",
+        url: `https://github.com/eth-infinitism/account-abstraction`,
       },
       {
         name: "Safe",
-        url: "`https://github.com/safe-global/safe-contracts/`",
+        url: `https://github.com/safe-global/safe-contracts/`,
       },
       {
         name: "Stackup",
-        url: "`https://github.com/stackup-wallet/stackup`",
+        url: `https://github.com/stackup-wallet/stackup`,
       },
       {
         name: "Soul Wallet",
-        url: "`https://github.com/proofofsoulprotocol/soul-wallet-contract`",
+        url: `https://github.com/proofofsoulprotocol/soul-wallet-contract`,
       },
       {
         name: "Etherspot",
-        url: "`https://github.com/etherspot/etherspot-contracts/`",
+        url: `https://github.com/etherspot/etherspot-contracts/`,
       },
       {
         name: "Patch Wallet",
-        url: "`https://github.com/PaymagicXYZ/patch-base-account-contracts`",
+        url: `https://github.com/PaymagicXYZ/patch-base-account-contracts`,
       },
     ],
   },

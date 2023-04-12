@@ -35,7 +35,7 @@ const SocialLinks = () => {
         <div style={{ height: '2.5em', width: '2.5em' }}>
         <Image src={mirrorImage} alt="Mirror.xyz" />
         </div>
-          <span>Mirror.xyz</span>
+          <span>Official mirror.xyz</span>
         </a>        
         <a
           href="https://twitter.com/4337Mafia"
