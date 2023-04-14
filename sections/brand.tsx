@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Brand() {
   return (
-    <section className="flex flex-row justify-between items-center">
-        <div className="p-12 bg-white/[0.7] rounded-3xl">
+    <section className="flex flex-col md:flex-row justify-between items-center">
+      <div className="p-12 bg-white/[0.7] rounded-3xl md:w-7/12 flex flex-col justify-between">
         <div>
           <h1 className="font-bold text-2xl mb-12">
             ERC-4337: <br />
@@ -16,13 +16,12 @@ export default function Brand() {
             new separate mempool. Bundlers package up a set of these objects into a single transaction by making a call to a
             special contract, and that transaction then gets included in a block.
           </p>
-
-          <div className="flex flex-row mt-10 gap-4">
-            <a className="button w-full button-primary" href="#join">Join The Community</a>
-            <a className="button w-full h-full" href="/docs">Read The Docs</a>
-          </div>
         </div>
-    </div>
-      </section>
+        <div className="flex flex-col md:flex-row pt-10 gap-4">
+          <a className="button w-full md:w-full button-primary" href="#join">Join The Community</a>
+          <a className="button w-full md:w-full" href="/docs">Read The Docs</a>
+        </div>
+      </div>
+    </section>
   );
 }
