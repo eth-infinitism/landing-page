@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/eth-infinitism/account-abstraction', 
   },
-  docsRepositoryBase: 'https://github.com/eth-infinitism/landing-page',
+  docsRepositoryBase: 'https://github.com/eth-infinitism/landing-page/blob/master',
   nextThemes: {
     forcedTheme: 'light',
   },
