@@ -27,6 +27,7 @@ import infura_icon from '@assets/logos/infura.jpeg';
 import metamask_icon from '@assets/logos/metamask.jpeg';
 import ambire_icon from '@assets/logos/ambire.jpeg';
 import cartridge_icon from '@assets/logos/cartridge.jpeg';
+import iotex_icon from '@assets/logos/iotex.jpeg';
 
 
 export interface IPartnerItem {
@@ -146,5 +147,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: cartridge_icon,
     link: 'https://cartridge.gg/',
+  },
+  {
+    logo: iotex_icon,
+    link: 'https://iotex.io/',
   },  
 ];
