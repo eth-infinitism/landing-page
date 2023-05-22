@@ -99,6 +99,10 @@ export const Code: IResourceSection[] = [
         name: "Patch Wallet",
         url: `https://github.com/PaymagicXYZ/patch-base-account-contracts`,
       },
+      {
+        name: "Kernel (ZeroDev)",
+        url: `https://github.com/zerodevapp/kernel`,
+      },
     ],
   },
   {
