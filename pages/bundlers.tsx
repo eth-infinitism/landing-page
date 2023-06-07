@@ -8,8 +8,8 @@ import BundlersOverallTestResultTable from '@components/BundlersOverallTestResul
 import BundlersPerTestResultsTable from '@components/BundlersPerTestResultsTable';
 import LoadingIndicator from '@components/LoadingIndicator';
 
-
-const ALL_HISTORY = 'https://bundler-test-results.eip4337.com/history/history.json';
+const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/`
+const ALL_HISTORY = `${TEST_RESULTS_BASE_URL}history/history.json`;
 const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
 
 
