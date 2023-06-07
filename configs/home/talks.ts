@@ -7,7 +7,7 @@ export interface ITalkItem {
 export const TalkItems: ITalkItem[] = [
   {
     title: 'Account abstraction: building an ERC-4337 wallet',
-    subtitle: 'ETHBogotá',
+    subtitle: 'ETHGlobal Bogotá',
     url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
   },
   {
@@ -27,7 +27,7 @@ export const TalkItems: ITalkItem[] = [
   },
   {
     title: 'ERC 4337: Account Abstraction via Alternative Mempool',
-    subtitle: 'ETHAmsterdam',
+    subtitle: 'ETHGlobal Amsterdam',
     url: 'https://www.youtube.com/watch?v=eyT6WzJmWyc',
   },
   {
@@ -39,5 +39,10 @@ export const TalkItems: ITalkItem[] = [
     title: 'Account Abstraction and the future of custody',
     subtitle: `Building Blocks'23 TLV`,
     url: 'https://www.youtube.com/watch?v=BoI5OgZ_dXk',
+  },
+  {
+    title: 'Unlocking Account Abstraction - Smart accounts for the next billion users',
+    subtitle: `ETHGlobal Tokyo`,
+    url: 'https://www.youtube.com/watch?v=H5c84HERmkM',
   },
 ];

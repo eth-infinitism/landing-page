@@ -17,7 +17,7 @@ const resources = () => {
       
       <ResourceBlock label="Articles" sections={Articles} />
 
-      <ResourceBlock label="Tutorials" sections={Tutorials} />
+      {/* <ResourceBlock label="Tutorials" sections={Tutorials} /> */}
 
       
     </div>
