@@ -17,6 +17,10 @@ export const Code: IResourceSection[] = [
         name: "Unlocking Account Abstraction - a workshop",
         url: `https://www.youtube.com/watch?v=H5c84HERmkM`,
       },
+      {
+        name: `Web3Auth Integration with UserOp.js Using Next.js`,
+        url: `https://github.com/stackup-wallet/next-web3auth-userop-example`
+      }
     ]
   },
   {
