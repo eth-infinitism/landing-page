@@ -78,7 +78,11 @@ export const Code: IResourceSection[] = [
       {
         name: "Etherspot",
         url: `https://github.com/etherspot/etherspot-contracts/`,
-      }
+      },
+      {
+        name: "Kernel (ZeroDev)",
+        url: `https://github.com/zerodevapp/kernel`,
+      },
     ],
   },
   {
