@@ -28,6 +28,7 @@ import metamask_icon from '@assets/logos/metamask.jpeg';
 import ambire_icon from '@assets/logos/ambire.jpeg';
 import cartridge_icon from '@assets/logos/cartridge.jpeg';
 import iotex_icon from '@assets/logos/iotex.jpeg';
+import openfort_icon from '@assets/logos/openfort.jpeg';
 
 
 export interface IPartnerItem {
@@ -151,5 +152,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: iotex_icon,
     link: 'https://iotex.io/',
+  },
+  {
+    logo: openfort_icon,
+    link: 'https://www.openfort.xyz/',
   },  
 ];
