@@ -10,17 +10,9 @@ export const Code: IResourceSection[] = [
         url: `https://github.com/eth-infinitism/trampoline`
       },
       {
-        name: `Building a custom wallet with Trampoline - a step-by-step guide`,
-        url: `https://mirror.xyz/erc4337official.eth/r0Sxa_ncYJA8y7_YHeKz9cShDgfTNR1fVBolcBN7VZ4`
-      },  
-      {
-        name: "Unlocking Account Abstraction - a workshop",
-        url: `https://www.youtube.com/watch?v=H5c84HERmkM`,
+        name: `UserOps.js, A simple JS library for building ERC-4337 UserOperations`,
+        url: `https://github.com/stackup-wallet/userop.js`
       },
-      {
-        name: `Web3Auth Integration with UserOp.js Using Next.js`,
-        url: `https://github.com/stackup-wallet/next-web3auth-userop-example`
-      }
     ]
   },
   {
@@ -39,7 +31,7 @@ export const Code: IResourceSection[] = [
         url: `https://zerodev.app/`,
       },
       {
-        name: "bcnmy/biconomy-client-sdk",
+        name: "Biconomy SDK",
         url: `https://github.com/bcnmy/biconomy-client-sdk`,
       },
     ],
@@ -47,6 +39,10 @@ export const Code: IResourceSection[] = [
   {
     sectionName: "Contracts of ERC-4337 Wallets",
     resources: [
+      {
+        name: "Kernel (ZeroDev)",
+        url: `https://github.com/zerodevapp/kernel`,
+      },
       {
         name: "Ambire Wallet",
         url: `https://github.com/AmbireTech/wallet/tree/development/contracts`,
@@ -78,10 +74,6 @@ export const Code: IResourceSection[] = [
       {
         name: "Etherspot",
         url: `https://github.com/etherspot/etherspot-contracts/`,
-      },
-      {
-        name: "Kernel (ZeroDev)",
-        url: `https://github.com/zerodevapp/kernel`,
       },
     ],
   },
@@ -120,15 +112,6 @@ export const Code: IResourceSection[] = [
       {
         name: `OpenZepplin: Part 2`,
         url: `https://blog.openzeppelin.com/eip-4337-ethereum-account-abstraction-incremental-audit/`
-      }
-    ]
-  },
-  {
-    sectionName: `RPC Providers`,
-    resources: [
-      {
-        name: `Account Abstraction RPC Providers`,
-        url: `https://github.com/arddluma/awesome-list-rpc-nodes-providers#account-abstraction-rpc-providers`
       }
     ]
   }
