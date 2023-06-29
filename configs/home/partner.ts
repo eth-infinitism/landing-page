@@ -29,7 +29,7 @@ import ambire_icon from '@assets/logos/ambire.jpeg';
 import cartridge_icon from '@assets/logos/cartridge.jpeg';
 import iotex_icon from '@assets/logos/iotex.jpeg';
 import openfort_icon from '@assets/logos/openfort.jpeg';
-import blockpi_icon from '@assets/logos/blockpi.jpeg';
+import blockpi_icon from '@assets/logos/blockpi.png';
 
 
 export interface IPartnerItem {
