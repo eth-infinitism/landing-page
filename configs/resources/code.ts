@@ -42,6 +42,10 @@ export const Code: IResourceSection[] = [
         name: "bcnmy/biconomy-client-sdk",
         url: `https://github.com/bcnmy/biconomy-client-sdk`,
       },
+      {
+        name: "ioPay userop-swift",
+        url: `https://github.com/iotexproject/userop-swift`,
+      },
     ],
   },
   {
@@ -66,6 +70,10 @@ export const Code: IResourceSection[] = [
       {
         name: "Infinitism",
         url: `https://github.com/eth-infinitism/account-abstraction`,
+      },
+      {
+        name: "ioPay Wallet",
+        url: `https://github.com/iotexproject/account-abstraction-contracts`,
       },
       {
         name: "Stackup",
