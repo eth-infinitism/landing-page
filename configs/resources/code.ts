@@ -111,6 +111,15 @@ export const Code: IResourceSection[] = [
     ]
   },
   {
+    sectionName: `4337 Explorer`,
+    resources: [
+      {
+        name: `JiffyScan`,
+        url: `https://www.jiffyscan.xyz/`
+      }
+    ]
+  },
+  {
     sectionName: `Audits`,
     resources: [
       {
@@ -131,5 +140,5 @@ export const Code: IResourceSection[] = [
         url: `https://github.com/arddluma/awesome-list-rpc-nodes-providers#account-abstraction-rpc-providers`
       }
     ]
-  }
+  },
 ];

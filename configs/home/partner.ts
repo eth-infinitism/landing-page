@@ -31,7 +31,7 @@ import iotex_icon from '@assets/logos/iotex.jpeg';
 import openfort_icon from '@assets/logos/openfort.jpeg';
 import blockpi_icon from '@assets/logos/blockpi.png';
 import blocko_icon from '@assets/logos/blocko.jpg'
-
+import jiffyscan_icon from '@assets/logos/jiffyscan.png'
 
 export interface IPartnerItem {
   logo: StaticImageData | string;
@@ -166,5 +166,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: blocko_icon,
     link: 'https://www.blocto.io/',
+  }, 
+  {
+    logo: jiffyscan_icon,
+    link: 'https://www.jiffyscan.xyz/',
   },
 ];
