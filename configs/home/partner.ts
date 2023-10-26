@@ -31,6 +31,7 @@ import iotex_icon from '@assets/logos/iotex.jpeg';
 import openfort_icon from '@assets/logos/openfort.jpeg';
 import blockpi_icon from '@assets/logos/blockpi.png';
 import hexlink_icon from '@assets/logos/hexlink.jpg';
+import blocko_icon from '@assets/logos/blocko.jpg'
 
 
 export interface IPartnerItem {
@@ -163,6 +164,10 @@ export const PartnerItems: IPartnerItem[] = [
     logo: blockpi_icon,
     link: 'https://blockpi.io/',
   }, 
+  {
+    logo: blocko_icon,
+    link: 'https://www.blocto.io/',
+  },
   {
     logo: hexlink_icon,
     link: 'https://www.hexlink.io/',
