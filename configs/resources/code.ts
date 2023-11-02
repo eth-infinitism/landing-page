@@ -106,7 +106,7 @@ export const Code: IResourceSection[] = [
       },
       {
         name: `Rust Implementation`,
-        url: `https://github.com/Vid201/aa-bundler/`
+        url: `https://github.com/Vid201/silius/`
       },
       {
         name: `Infinitism: TypeScript Implementation`,
