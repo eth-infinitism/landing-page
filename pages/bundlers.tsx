@@ -12,6 +12,40 @@ const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/`
 const ALL_HISTORY = `${TEST_RESULTS_BASE_URL}history/history.json`;
 const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
 
+const mapBundlerNames: {[key:string]:string } = {
+  'aabundler-launcher': 'aabundler',
+  'stackup-bundler-launcher' : 'stackup',
+  'aa-bundler-rust-launcher': 'silius',
+  'skandha-launcher': 'skandha',
+  'voltaire-bundler-launcher': 'voltaire'
+
+};
+
+type BundlerDataType = { [data:string]: { [bundler:string]:any } }
+
+function mapBundlerName(name:string): string {
+  return name == 'aa-bundler-rust-launcher' ? 'silius' :
+    name.
+      replace('-bundler','').
+      replace('-launcher', '')
+}
+
+function remapBundlerNames(data: BundlerDataType) : BundlerDataType {
+  var ret: BundlerDataType = {}
+
+  function entriesToObject(e: [string, any][]): any {
+    return e.reduce((set,val)=>({...set, [val[0]]:val[1]}), {})
+  }
+
+  for (const date of Object.keys(data)) {
+    ret[date] = entriesToObject(
+      Object.entries(data[date])
+        .map(([k,v])=>[ mapBundlerName(k),v ])
+    )
+  }
+  return ret
+}
+
 
 export function parseDateTime(dateTimeString: string): Date {
   // Check if the input string has the correct length
@@ -120,8 +154,8 @@ function sortBundlersByCount(results: IBundlersTestResults): IBundlerDisplayName
   // Create an array of IBundlerDisplayName objects sorted by count
   const sortedBundlerDisplayNames: IBundlerDisplayName[] = [];
   for (const bundlerName of sortedBundlerNames) {
-    const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName].name;
-    sortedBundlerDisplayNames.push({ bundlerName, bundlerDisplayName });
+    const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName]?.name?.replace(/^(.)/, ch=>ch.toUpperCase());
+    sortedBundlerDisplayNames.push({ bundlerName, bundlerDisplayName : bundlerDisplayName ?? bundlerName });
   }
 
   return sortedBundlerDisplayNames;
@@ -165,7 +199,7 @@ const bundlers = () => {
     fetch(ALL_HISTORY)
       .then((res) => res.json())
       .then((data) => {
-        setData(data)
+        setData(remapBundlerNames(data) as any)
         setLoading(false)
       })
   }, [])
