@@ -33,128 +33,191 @@ import openfort_icon from '@assets/logos/openfort.jpeg';
 
 export interface IPartnerItem {
   logo: StaticImageData | string;
+  name: string;
+  description: string;
   link: string;
+
 }
 
 export const PartnerItems: IPartnerItem[] = [
   {
     logo: EF_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.ethereum.org/', 
   },
   {
     logo: stackup_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.stackup.sh/', 
   },
   {
     logo: polygon_icon,
+    name: ``,
+    description: ``,
     link: 'https://polygon.technology/', 
   },
   {
     logo: nethermind_icon,
+    name: ``,
+    description: ``,
     link: 'https://nethermind.io/', 
   },
   {
     logo: alchemy_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.alchemy.com/',
   },
   {
     logo: avalanche_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.avax.com/',
   },
   {
     logo: infura_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.infura.io/',
   },
   {
     logo: metamask_icon,
+    name: ``,
+    description: ``,
     link: 'https://metamask.io/',
   },
   {
     logo: etherspot_icon,
+    name: ``,
+    description: ``,
     link: 'https://etherspot.io/',
   },
   {
     logo: blocknative_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.blocknative.com/',
   },
   {
     logo: biconomy_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.biconomy.io/', 
   },
   {
     logo: zkSync_icon,
+    name: ``,
+    description: ``,
     link: 'https://zksync.io/',
   },
   {
     logo: unipass_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.unipass.id/',
   },
   {
     logo: soulwallet_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.soulwallet.io/',
   },
   {
     logo: arbitrum_icon,
+    name: ``,
+    description: ``,
     link: 'https://arbitrum.io/',
   },
   {
     logo: base_icon,
+    name: ``,
+    description: ``,
     link: 'https://base.org/',
   },
   {
     logo: gnosis_chain_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.gnosis.io/',
   },
   {
     logo: safe_icon,
+    name: ``,
+    description: ``,
     link: 'https://safe.global/',
   },
   {
     logo: optimism_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.optimism.io/',
   },
   {
     logo: starkware_icon,
+    name: ``,
+    description: ``,
     link: 'https://starkware.co/',
   },
   {
     logo: argent_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.argent.xyz/',
   },
   {
     logo: candide_wallet_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.candidewallet.com/',
   },
   {
     logo: thirdweb_icon,
+    name: ``,
+    description: ``,
     link: 'https://thirdweb.com/',
   },
   {
     logo: walletconnect_icon,
+    name: ``,
+    description: ``,
     link: 'https://walletconnect.com/',
   },
   {
     logo: zerodev_icon,
+    name: ``,
+    description: ``,
     link: 'https://zerodev.app/',
   },
   {
     logo: pimlico_icon,
+    name: ``,
+    description: ``,
     link: 'https://pimlico.io/',
   },
   {
     logo: ambire_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.ambire.com/',
   }, 
   {
     logo: cartridge_icon,
+    name: ``,
+    description: ``,
     link: 'https://cartridge.gg/',
   },
   {
     logo: iotex_icon,
+    name: ``,
+    description: ``,
     link: 'https://iotex.io/',
   },
   {
     logo: openfort_icon,
+    name: ``,
+    description: ``,
     link: 'https://www.openfort.xyz/',
   },  
 ];
