@@ -43,7 +43,7 @@ export const Code: IResourceSection[] = [
         url: `https://zerodev.app/`,
       },
       {
-        name: "bcnmy/biconomy-client-sdk",
+        name: "Biconomy SDK",
         url: `https://github.com/bcnmy/biconomy-client-sdk`,
       },
       {
@@ -55,6 +55,10 @@ export const Code: IResourceSection[] = [
   {
     sectionName: "Contracts of ERC-4337 Wallets",
     resources: [
+      {
+        name: "Kernel (ZeroDev)",
+        url: `https://github.com/zerodevapp/kernel`,
+      },
       {
         name: "Ambire Wallet",
         url: `https://github.com/AmbireTech/wallet/tree/development/contracts`,
@@ -90,10 +94,6 @@ export const Code: IResourceSection[] = [
       {
         name: "Etherspot",
         url: `https://github.com/etherspot/etherspot-contracts/`,
-      },
-      {
-        name: "Kernel (ZeroDev)",
-        url: `https://github.com/zerodevapp/kernel`,
       },
     ],
   },
@@ -136,15 +136,6 @@ export const Code: IResourceSection[] = [
       {
         name: `OpenZepplin: Part 2`,
         url: `https://blog.openzeppelin.com/eip-4337-ethereum-account-abstraction-incremental-audit/`
-      }
-    ]
-  },
-  {
-    sectionName: `RPC Providers`,
-    resources: [
-      {
-        name: `Account Abstraction RPC Providers`,
-        url: `https://github.com/arddluma/awesome-list-rpc-nodes-providers#account-abstraction-rpc-providers`
       }
     ]
   }
