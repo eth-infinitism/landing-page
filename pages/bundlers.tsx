@@ -154,8 +154,8 @@ function sortBundlersByCount(results: IBundlersTestResults): IBundlerDisplayName
   // Create an array of IBundlerDisplayName objects sorted by count
   const sortedBundlerDisplayNames: IBundlerDisplayName[] = [];
   for (const bundlerName of sortedBundlerNames) {
-    const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName].name.replace(/^(.)/, ch=>ch.toUpperCase());
-    sortedBundlerDisplayNames.push({ bundlerName, bundlerDisplayName });
+    const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName]?.name?.replace(/^(.)/, ch=>ch.toUpperCase());
+    sortedBundlerDisplayNames.push({ bundlerName, bundlerDisplayName : bundlerDisplayName ?? bundlerName });
   }
 
   return sortedBundlerDisplayNames;

@@ -30,8 +30,11 @@ import cartridge_icon from '@assets/logos/cartridge.jpeg';
 import iotex_icon from '@assets/logos/iotex.jpeg';
 import openfort_icon from '@assets/logos/openfort.jpeg';
 import blockpi_icon from '@assets/logos/blockpi.png';
-import blocko_icon from '@assets/logos/blocko.jpg';
 import particle_icon from '@assets/logos/particle-network.png';
+import ioPay_icon from '@assets/logos/ioPay.png';
+import blocko_icon from '@assets/logos/blocko.jpg';
+import okx_icon from '@assets/logos/okx.jpeg';
+
 
 
 export interface IPartnerItem {
@@ -42,19 +45,19 @@ export interface IPartnerItem {
 export const PartnerItems: IPartnerItem[] = [
   {
     logo: EF_icon,
-    link: 'https://www.ethereum.org/', 
+    link: 'https://www.ethereum.org/',
   },
   {
     logo: stackup_icon,
-    link: 'https://www.stackup.sh/', 
+    link: 'https://www.stackup.sh/',
   },
   {
     logo: polygon_icon,
-    link: 'https://polygon.technology/', 
+    link: 'https://polygon.technology/',
   },
   {
     logo: nethermind_icon,
-    link: 'https://nethermind.io/', 
+    link: 'https://nethermind.io/',
   },
   {
     logo: alchemy_icon,
@@ -82,7 +85,7 @@ export const PartnerItems: IPartnerItem[] = [
   },
   {
     logo: biconomy_icon,
-    link: 'https://www.biconomy.io/', 
+    link: 'https://www.biconomy.io/',
   },
   {
     logo: zkSync_icon,
@@ -95,6 +98,10 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: soulwallet_icon,
     link: 'https://www.soulwallet.io/',
+  },
+  {
+    logo: okx_icon,
+    link: 'https://www.okx.com/',
   },
   {
     logo: arbitrum_icon,
@@ -147,7 +154,7 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: ambire_icon,
     link: 'https://www.ambire.com/',
-  }, 
+  },
   {
     logo: cartridge_icon,
     link: 'https://cartridge.gg/',
@@ -159,11 +166,15 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: openfort_icon,
     link: 'https://www.openfort.xyz/',
-  },  
+  },
   {
     logo: blockpi_icon,
     link: 'https://blockpi.io/',
-  }, 
+  },
+  {
+    logo: ioPay_icon,
+    link: 'https://iopay.me/',
+  },
   {
     logo: blocko_icon,
     link: 'https://www.blocto.io/',
@@ -171,5 +182,5 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: particle_icon,
     link: 'https://particle.network/',
-  },
+  }
 ];
