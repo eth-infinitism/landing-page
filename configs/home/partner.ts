@@ -30,6 +30,7 @@ import cartridge_icon from '@assets/logos/cartridge.jpeg';
 import iotex_icon from '@assets/logos/iotex.jpeg';
 import openfort_icon from '@assets/logos/openfort.jpeg';
 import blockpi_icon from '@assets/logos/blockpi.png';
+import oxpass_icon from '@assets/logos/oxpass.png';
 import jiffyscan_icon from '@assets/logos/jiffyscan.png';
 import particle_icon from '@assets/logos/particle-network.png';
 import ioPay_icon from '@assets/logos/ioPay.png';
@@ -170,6 +171,10 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: blockpi_icon,
     link: 'https://blockpi.io/',
+  },
+  {
+    logo: oxpass_icon,
+    link: 'https://0xpass.io',
   },
   {
     logo: ioPay_icon,
