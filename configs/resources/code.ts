@@ -127,6 +127,15 @@ export const Code: IResourceSection[] = [
     ]
   },
   {
+    sectionName: `4337 Explorers`,
+    resources: [
+      {
+        name: `JiffyScan`,
+        url: `https://www.jiffyscan.xyz/`
+      }
+    ]
+  },
+  {
     sectionName: `Audits`,
     resources: [
       {
