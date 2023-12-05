@@ -20,6 +20,10 @@ export const Code: IResourceSection[] = [
       {
         name: `Web3Auth Integration with UserOp.js Using Next.js`,
         url: `https://github.com/stackup-wallet/next-web3auth-userop-example`
+      },
+      {
+        name: `Particle Network, 4337-Enabled Wallet-as-a-Service - a workshop`,
+        url: `https://www.youtube.com/watch?v=BOAm3r10RC0`
       }
     ]
   },
@@ -115,6 +119,10 @@ export const Code: IResourceSection[] = [
       {
         name: `EtherSpot: Typescript Implementation`,
         url: `https://github.com/etherspot/skandha`
+      },
+      {
+        name: `Particle Network: TypeScript Implementation`,
+        url: `https://github.com/Particle-Network/particle-bundler-server`
       }
     ]
   },

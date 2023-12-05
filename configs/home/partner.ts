@@ -30,9 +30,11 @@ import cartridge_icon from '@assets/logos/cartridge.jpeg';
 import iotex_icon from '@assets/logos/iotex.jpeg';
 import openfort_icon from '@assets/logos/openfort.jpeg';
 import blockpi_icon from '@assets/logos/blockpi.png';
+import particle_icon from '@assets/logos/particle-network.png';
 import ioPay_icon from '@assets/logos/ioPay.png';
 import blocko_icon from '@assets/logos/blocko.jpg';
 import okx_icon from '@assets/logos/okx.jpeg';
+
 
 
 export interface IPartnerItem {
@@ -176,5 +178,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: blocko_icon,
     link: 'https://www.blocto.io/',
+  },
+  {
+    logo: particle_icon,
+    link: 'https://particle.network/',
   }
 ];
