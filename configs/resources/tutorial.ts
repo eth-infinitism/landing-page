@@ -3,25 +3,33 @@ import { IResourceSection } from '../type';
 // Config tutorials here
 export const Tutorials: IResourceSection[] = [
   {
-    sectionName: 'Account Abstraction I',
+    sectionName: `Comprehensive guides`,
     resources: [
       {
-        name: 'Account Abstraction: A New Paradigm for Smart Contracts',
-        url: 'https://medium.com/coinmonks/account-abstraction-a-new-paradigm-for-smart-contracts-6b5b9f1f1f0',
+        name: `Stackup's Guide to Account Abstraction`,
+        url: 'https://docs.stackup.sh/docs/account-abstraction',
+      },
+      {
+        name: `Alchemy's Account Abstraction Learning Hub`,
+        url: `https://www.alchemy.com/learn/account-abstraction`,
+      },
+      {
+        name: "Unlocking Account Abstraction - a workshop",
+        url: `https://www.youtube.com/watch?v=H5c84HERmkM`,
       },
     ],
   },
   {
-    sectionName: 'Account Abstraction II',
+    sectionName: 'Specific guides',
     resources: [
       {
-        name: 'Account Abstraction: A New Paradigm for Smart Contracts II (a)',
-        url: 'https://medium.com/coinmonks/account-abstraction-a-new-paradigm-for-smart-contracts-6b5b9f1f1f0',
+        name: `Building a custom wallet with Trampoline - a step-by-step guide`,
+        url: `https://mirror.xyz/erc4337official.eth/r0Sxa_ncYJA8y7_YHeKz9cShDgfTNR1fVBolcBN7VZ4`
       },
       {
-        name: 'Account Abstraction: A New Paradigm for Smart Contracts II (b)',
-        url: 'https://medium.com/coinmonks/account-abstraction-a-new-paradigm-for-smart-contracts-6b5b9f1f1f0',
-      },
+        name: `Web3Auth Integration with UserOp.js Using Next.js`,
+        url: `https://github.com/stackup-wallet/next-web3auth-userop-example`
+      }
     ],
   },
 ];

@@ -20,6 +20,10 @@ export const Code: IResourceSection[] = [
       {
         name: `Web3Auth Integration with UserOp.js Using Next.js`,
         url: `https://github.com/stackup-wallet/next-web3auth-userop-example`
+      },
+      {
+        name: `Particle Network, 4337-Enabled Wallet-as-a-Service - a workshop`,
+        url: `https://www.youtube.com/watch?v=BOAm3r10RC0`
       }
     ]
   },
@@ -39,14 +43,22 @@ export const Code: IResourceSection[] = [
         url: `https://zerodev.app/`,
       },
       {
-        name: "bcnmy/biconomy-client-sdk",
+        name: "Biconomy SDK",
         url: `https://github.com/bcnmy/biconomy-client-sdk`,
+      },
+      {
+        name: "ioPay userop-swift",
+        url: `https://github.com/iotexproject/userop-swift`,
       },
     ],
   },
   {
     sectionName: "Contracts of ERC-4337 Wallets",
     resources: [
+      {
+        name: "Kernel (ZeroDev)",
+        url: `https://github.com/zerodevapp/kernel`,
+      },
       {
         name: "Ambire Wallet",
         url: `https://github.com/AmbireTech/wallet/tree/development/contracts`,
@@ -68,6 +80,10 @@ export const Code: IResourceSection[] = [
         url: `https://github.com/eth-infinitism/account-abstraction`,
       },
       {
+        name: "ioPay Wallet",
+        url: `https://github.com/iotexproject/account-abstraction-contracts`,
+      },
+      {
         name: "Stackup",
         url: `https://github.com/stackup-wallet/stackup`,
       },
@@ -78,10 +94,6 @@ export const Code: IResourceSection[] = [
       {
         name: "Etherspot",
         url: `https://github.com/etherspot/etherspot-contracts/`,
-      },
-      {
-        name: "Kernel (ZeroDev)",
-        url: `https://github.com/zerodevapp/kernel`,
       },
     ],
   },
@@ -107,11 +119,15 @@ export const Code: IResourceSection[] = [
       {
         name: `EtherSpot: Typescript Implementation`,
         url: `https://github.com/etherspot/skandha`
+      },
+      {
+        name: `Particle Network: TypeScript Implementation`,
+        url: `https://github.com/Particle-Network/particle-bundler-server`
       }
     ]
   },
   {
-    sectionName: `4337 Explorer`,
+    sectionName: `4337 Explorers`,
     resources: [
       {
         name: `JiffyScan`,
@@ -131,14 +147,5 @@ export const Code: IResourceSection[] = [
         url: `https://blog.openzeppelin.com/eip-4337-ethereum-account-abstraction-incremental-audit/`
       }
     ]
-  },
-  {
-    sectionName: `RPC Providers`,
-    resources: [
-      {
-        name: `Account Abstraction RPC Providers`,
-        url: `https://github.com/arddluma/awesome-list-rpc-nodes-providers#account-abstraction-rpc-providers`
-      }
-    ]
-  },
+  }
 ];
