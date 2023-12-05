@@ -10,8 +10,12 @@ export const Code: IResourceSection[] = [
         url: `https://github.com/eth-infinitism/trampoline`
       },
       {
-        name: `UserOps.js, A simple JS library for building ERC-4337 UserOperations`,
-        url: `https://github.com/stackup-wallet/userop.js`
+        name: `Building a custom wallet with Trampoline - a step-by-step guide`,
+        url: `https://mirror.xyz/erc4337official.eth/r0Sxa_ncYJA8y7_YHeKz9cShDgfTNR1fVBolcBN7VZ4`
+      },  
+      {
+        name: "Unlocking Account Abstraction - a workshop",
+        url: `https://www.youtube.com/watch?v=H5c84HERmkM`,
       },
       {
         name: `Web3Auth Integration with UserOp.js Using Next.js`,
