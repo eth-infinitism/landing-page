@@ -31,8 +31,8 @@ export const bundlerResources: IResourceSection[] = [
         url: 'https://github.com/stackup-wallet/stackup-bundler',
       },
       {
-        name: 'aa-bundler in Rust',
-        url: 'https://github.com/Vid201/aa-bundler/',
+        name: 'Silius Bundler',
+        url: 'https://github.com/Vid201/silius/',
       },
       {
         name: 'Skandha Bundler',

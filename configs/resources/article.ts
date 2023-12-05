@@ -153,6 +153,10 @@ export const Articles: IResourceSection[] = [
       {
         name: `4337 Misconceptions`,
         url: `https://twitter.com/johnrising_/status/1619166915624112131`
+      },
+      {
+        name: `What is a zkSNARK-based AccountAbstraction wallet?`,
+        url: `https://twitter.com/iotex_dev/status/1699511884993495054`
       }
     ]
   }
