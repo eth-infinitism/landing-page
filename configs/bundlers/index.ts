@@ -42,9 +42,10 @@ export const bundlerResources: IResourceSection[] = [
         name: 'Voltaire-Bundler',
         url: 'https://github.com/candidelabs/voltaire',
       },
-      
-      
-
+      {
+        name: 'OKBund',
+        url: 'https://github.com/okx/okbund',
+      },
     ],
   },
   {
