@@ -216,8 +216,11 @@ const bundlers = () => {
     <div className="mt-28 flex flex-col pb-64 gap-y-28 horizon-layout">
       <PageHeader
         name='Bundler CTS (Compatibility Test Suite) results dashboard'
-        description='A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of UserOperations and get the transaction included on-chain.'
-        moreDescription='This page presents an overview of the test coverage results all open source bundlers in the ecosystem. Useful information about the test suite, bundler specs and more can be found in the section at the bottom'
+        descriptions={[
+          'A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of UserOperations and get the transaction included on-chain.',
+          'This page presents an overview of the test coverage results all open source bundlers in the ecosystem. Useful information about the test suite, bundler specs and more can be found in the section at the bottom.',
+          <span>Published your own open source bundler? To add your bundler to the list, please submit a PR to <a href="https://github.com/eth-infinitism/bundler-test-executor" target="_blank" rel="noopener noreferrer" className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">https://github.com/eth-infinitism/bundler-test-executor</a></span>
+        ]}
       />
 
       <BundlersOverallTestResultTable bundlersNames={bundlersNames} latestResults={latestTestResults} />
