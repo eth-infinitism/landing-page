@@ -36,7 +36,7 @@ import particle_icon from '@assets/logos/particle-network.png';
 import ioPay_icon from '@assets/logos/ioPay.png';
 import blocko_icon from '@assets/logos/blocko.jpg';
 import okx_icon from '@assets/logos/okx.jpeg';
-
+import transeptor_labs_icon from '@assets/logos/transeptor-labs.jpeg';
 
 export interface IPartnerItem {
   logo: StaticImageData | string;
@@ -191,5 +191,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: particle_icon,
     link: 'https://particle.network/',
-  }
+  },
+  {
+    logo: transeptor_labs_icon,
+    link: 'https://transeptorlabs.io/',
+  },
 ];

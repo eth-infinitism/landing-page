@@ -46,6 +46,10 @@ export const bundlerResources: IResourceSection[] = [
         name: 'OKBund',
         url: 'https://github.com/okx/okbund',
       },
+      {
+        name: 'Transeptor',
+        url: 'https://github.com/transeptorlabs/transeptor-bundler',
+      },
     ],
   },
   {
