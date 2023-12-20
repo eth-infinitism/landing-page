@@ -123,7 +123,11 @@ export const Code: IResourceSection[] = [
       {
         name: `Particle Network: TypeScript Implementation`,
         url: `https://github.com/Particle-Network/particle-bundler-server`
-      }
+      },
+      {
+        name: `Transeptor: TypeScript Implementation`,
+        url: `https://github.com/transeptorlabs/transeptor-bundler`
+      },
     ]
   },
   {
