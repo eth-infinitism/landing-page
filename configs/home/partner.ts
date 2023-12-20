@@ -36,6 +36,7 @@ import particle_icon from '@assets/logos/particle-network.png';
 import ioPay_icon from '@assets/logos/ioPay.png';
 import blocko_icon from '@assets/logos/blocko.jpg';
 import okx_icon from '@assets/logos/okx.jpeg';
+import rhinestone_icon from '@assets/logos/rhinestone.png';
 import timeless_x from '@assets/logos/timeless_x.png';
 import transeptor_labs_icon from '@assets/logos/transeptor-labs.jpeg';
 
@@ -158,6 +159,10 @@ export const PartnerItems: IPartnerItem[] = [
     link: 'https://www.ambire.com/',
   },
   {
+    logo: rhinestone_icon,
+    link: 'https://rhinestone.wtf/',
+  },
+  {
     logo: cartridge_icon,
     link: 'https://cartridge.gg/',
   },
@@ -184,7 +189,7 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: blocko_icon,
     link: 'https://www.blocto.io/',
-  }, 
+  },
   {
     logo: jiffyscan_icon,
     link: 'https://www.jiffyscan.xyz/',
