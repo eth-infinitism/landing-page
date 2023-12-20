@@ -24,6 +24,10 @@ export const Code: IResourceSection[] = [
       {
         name: `Particle Network, 4337-Enabled Wallet-as-a-Service - a workshop`,
         url: `https://www.youtube.com/watch?v=BOAm3r10RC0`
+      },
+      {
+        name: `LearnWeb3's Account Abstraction Course - A developer-focused course for deep-diving into ERC-4337 based Account Abstraction`,
+        url: `https://learnweb3.io/courses/account-abstraction-course`
       }
     ]
   },
@@ -123,7 +127,11 @@ export const Code: IResourceSection[] = [
       {
         name: `Particle Network: TypeScript Implementation`,
         url: `https://github.com/Particle-Network/particle-bundler-server`
-      }
+      },
+      {
+        name: `Transeptor: TypeScript Implementation`,
+        url: `https://github.com/transeptorlabs/transeptor-bundler`
+      },
     ]
   },
   {
