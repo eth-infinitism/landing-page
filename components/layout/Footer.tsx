@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import logo from '@assets/logo.svg';
+import logo from '@assets/4337-logo/ERC-4337-team-logo-color.svg';
 import { INavigationItem, NavigationItems } from '@configs/home/navigation';
 import { ISocialItem, SocialItems } from '@configs/home/social';
 
@@ -20,7 +20,7 @@ const SocialItem = ({ icon, url }: ISocialItem) => (
 export default function Footer() {
   return (
     <div className="absolute w-full bottom-0 h-22 border-t border-grey py-5 bg-white  horizon-layout">
-      <Image src={logo} width={40} height={40} alt="logo" />
+      <Image src={logo} width={120} alt="logo" />
 
       <div className="flex flex-row justify-between mt-6">
         <div className="flex flex-wrap max-w-sm">
