@@ -6,19 +6,14 @@ export interface ITalkItem {
 
 export const TalkItems: ITalkItem[] = [
   {
-    title: 'Account abstraction: building an ERC-4337 wallet',
-    subtitle: 'ETHGlobal Bogotá',
-    url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
+    title: 'What is NATIVE Account Abstraction?',
+    subtitle: 'DCxPrague',
+    url: 'https://youtu.be/3GW_TKRKaYc',
   },
   {
     title: `What's new in ERC-4337?`,
     subtitle: 'PEEPanEIP #100',
     url: 'https://www.youtube.com/watch?v=CgXzDuN5Xqc',
-  },
-  {
-    title: 'Account Abstraction: Making Accounts Smarter',
-    subtitle: 'Devcon Bogotá',
-    url: 'https://www.youtube.com/watch?v=HbNdGex47ks',
   },
   {
     title: 'Account Abstraction Panel',
@@ -44,5 +39,15 @@ export const TalkItems: ITalkItem[] = [
     title: 'Unlocking Account Abstraction - Smart accounts for the next billion users',
     subtitle: `ETHGlobal Tokyo`,
     url: 'https://www.youtube.com/watch?v=H5c84HERmkM',
+  },
+  {
+    title: 'Account abstraction: building an ERC-4337 wallet',
+    subtitle: 'ETHGlobal Bogotá',
+    url: 'https://www.youtube.com/watch?v=xHWlJiL_iZA',
+  },
+  {
+    title: 'Account Abstraction: Making Accounts Smarter',
+    subtitle: 'Devcon Bogotá',
+    url: 'https://www.youtube.com/watch?v=HbNdGex47ks',
   },
 ];
