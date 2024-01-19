@@ -39,6 +39,7 @@ import okx_icon from '@assets/logos/okx.jpeg';
 import rhinestone_icon from '@assets/logos/rhinestone.png';
 import timeless_x from '@assets/logos/timeless_x.png';
 import transeptor_labs_icon from '@assets/logos/transeptor-labs.jpeg';
+import cyberwallet from '@assets/logos/cyberwallet.png';
 
 export interface IPartnerItem {
   logo: StaticImageData | string;
@@ -205,5 +206,9 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: transeptor_labs_icon,
     link: 'https://transeptorlabs.io/',
+  },
+  {
+    logo: cyberwallet,
+    link: 'https://wallet.cyber.co',
   },
 ];
