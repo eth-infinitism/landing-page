@@ -4,6 +4,7 @@ import unipass_icon from '@assets/logos/unipass.jpeg';
 import biconomy_icon from '@assets/logos/biconomy.jpeg';
 import alchemy_icon from '@assets/logos/alchemy.png';
 import zkSync_icon from '@assets/logos/zkSync.jpeg';
+import clave_icon from '@assets/logos/clave.png';
 import EF_icon from '@assets/logos/EF.jpeg';
 import nethermind_icon from '@assets/logos/nethermind.jpeg';
 import soulwallet_icon from '@assets/logos/soul_wallet.jpeg';
@@ -93,6 +94,10 @@ export const PartnerItems: IPartnerItem[] = [
   {
     logo: zkSync_icon,
     link: 'https://zksync.io/',
+  },
+  {
+    logo: clave_icon,
+    link: 'https://getclave.io/',
   },
   {
     logo: unipass_icon,
