@@ -1,4 +1,4 @@
-// bundlers CTS result for v0.6 (legacy)
+// bundlers CTS result for new v0.7 (active)
 import { useEffect, useState } from 'react';
 import PageHeader from '@components/PageHeader';
 import React from 'react';
@@ -9,7 +9,7 @@ import BundlersOverallTestResultTable from '@components/BundlersOverallTestResul
 import BundlersPerTestResultsTable from '@components/BundlersPerTestResultsTable';
 import LoadingIndicator from '@components/LoadingIndicator';
 
-const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/v06/`
+const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/v07/`
 const ALL_HISTORY = `${TEST_RESULTS_BASE_URL}history/history.json`;
 const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
 
