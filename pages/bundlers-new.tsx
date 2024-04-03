@@ -9,7 +9,9 @@ import BundlersOverallTestResultTable from '@components/BundlersOverallTestResul
 import BundlersPerTestResultsTable from '@components/BundlersPerTestResultsTable';
 import LoadingIndicator from '@components/LoadingIndicator';
 
-const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/v07/`
+//for local dev, requires local checkout of "bundler-test-results" project, and symlink from "public" folder to it
+// (eg. cd public; ln -s ../../bundler-test-results/v07)
+const TEST_RESULTS_BASE_URL = process.env.NODE_ENV == 'development'? '/v07/':`https://bundler-test-results.erc4337.io/v07/`
 const ALL_HISTORY = `${TEST_RESULTS_BASE_URL}history/history.json`;
 const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
 

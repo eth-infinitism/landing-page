@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn dev-folders && next dev",
+    "dev-folders": "rm -rf public/v0*; test -d ../bundler-test-results && for d in ../bundler-test-results/v0*; do ln -w -s ../$d ./public || exit 1; done",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
