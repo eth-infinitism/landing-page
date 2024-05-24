@@ -50,6 +50,10 @@ export const bundlerResources: IResourceSection[] = [
         name: 'Transeptor',
         url: 'https://github.com/transeptorlabs/transeptor-bundler',
       },
+      {
+        name: 'Rundler',
+        url: 'https://github.com/alchemyplatform/rundler'
+      }
     ],
   },
   {

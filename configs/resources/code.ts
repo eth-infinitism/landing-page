@@ -54,6 +54,10 @@ export const Code: IResourceSection[] = [
         name: "ioPay userop-swift",
         url: `https://github.com/iotexproject/userop-swift`,
       },
+      {
+        name: "Alchemy AA SDK",
+        url: `https://github.com/alchemyplatform/aa-sdk`
+      }
     ],
   },
   {
@@ -99,6 +103,14 @@ export const Code: IResourceSection[] = [
         name: "Etherspot",
         url: `https://github.com/etherspot/etherspot-contracts/`,
       },
+      {
+        name: "Light Account",
+        url: "https://github.com/alchemyplatform/light-account"
+      },
+      {
+        name: "Alchemy Modular Account",
+        url: "https://github.com/alchemyplatform/modular-account"
+      }
     ],
   },
   {
@@ -113,7 +125,7 @@ export const Code: IResourceSection[] = [
         url: `https://github.com/candidelabs/Candide-bundler-and-paymaster-RPC`
       },
       {
-        name: `Rust Implementation`,
+        name: `Silius: Rust Implementation`,
         url: `https://github.com/Vid201/silius/`
       },
       {
@@ -131,6 +143,10 @@ export const Code: IResourceSection[] = [
       {
         name: `Transeptor: TypeScript Implementation`,
         url: `https://github.com/transeptorlabs/transeptor-bundler`
+      },
+      {
+        name: `Rundler: Rust Implementation`,
+        url: `https://github.com/alchemyplatform/rundler`
       },
     ]
   },
