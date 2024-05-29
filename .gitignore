@@ -15,6 +15,7 @@
 # builds
 ./next/
 /build
+/public/v0*
 
 # misc
 .DS_Store

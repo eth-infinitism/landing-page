@@ -12,7 +12,10 @@ import ErrorMessage from '@components/ErrorMessage';
 
 
 
-const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/`
+//for local dev, requires local checkout of "bundler-test-results" project, and symlink from "public" folder to it
+// (eg. cd public; ln -s ../../bundler-test-results/v06)
+const TEST_RESULTS_BASE_URL = process.env.NODE_ENV == 'development'? '/v06/':`https://bundler-test-results.erc4337.io/v06/`
+const ALL_HISTORY = `${TEST_RESULTS_BASE_URL}history/history.json`;
 const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
 
 const mapBundlerNames: { [key: string]: string } = {
