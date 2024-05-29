@@ -1,47 +1,52 @@
-// bundlers CTS result for v0.6 (legacy)
 import { useEffect, useState } from 'react';
 import PageHeader from '@components/PageHeader';
 import React from 'react';
 import ResourceBlock from '@components/ResourceBlock';
 import { bundlerResources } from '@configs/bundlers';
-import { IBundlerDisplayName, IBundlersTestResults, IBundlersTestResultsWrapper, IBundlerTestResults, IDisplayBundlersPerTestResults, IDisplayBundlersOverallTestResults, IDisplaySpecificBundlerPerTestResult, IDisplaySpecificBundlerOverallTestResult } from '@components/BundlersTableInterfaces';
+import { ITestCase, IBundlerDisplayName, IBundlersTestResults, IBundlersTestResultsWrapper, IBundlerTestResults, IDisplayBundlersPerTestResults, IDisplayBundlersOverallTestResults, IDisplaySpecificBundlerPerTestResult, IDisplaySpecificBundlerOverallTestResult } from '@components/BundlersTableInterfaces';
 import BundlersOverallTestResultTable from '@components/BundlersOverallTestResultsTable';
 import BundlersPerTestResultsTable from '@components/BundlersPerTestResultsTable';
 import LoadingIndicator from '@components/LoadingIndicator';
+import ErrorMessage from '@components/ErrorMessage';
 
-const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/v06/`
-const ALL_HISTORY = `${TEST_RESULTS_BASE_URL}history/history.json`;
+
+
+
+const TEST_RESULTS_BASE_URL = `https://bundler-test-results.erc4337.io/`
 const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
 
-const mapBundlerNames: {[key:string]:string } = {
+const mapBundlerNames: { [key: string]: string } = {
   'aabundler-launcher': 'aabundler',
-  'stackup-bundler-launcher' : 'stackup',
+  'stackup-bundler-launcher': 'stackup',
   'aa-bundler-rust-launcher': 'silius',
   'skandha-launcher': 'skandha',
   'voltaire-bundler-launcher': 'voltaire'
 
 };
 
-type BundlerDataType = { [data:string]: { [bundler:string]:any } }
 
-function mapBundlerName(name:string): string {
+
+
+type BundlerDataType = { [data: string]: { [bundler: string]: any } }
+
+function mapBundlerName(name: string): string {
   return name == 'aa-bundler-rust-launcher' ? 'silius' :
     name.
-      replace('-bundler','').
+      replace('-bundler', '').
       replace('-launcher', '')
 }
 
-function remapBundlerNames(data: BundlerDataType) : BundlerDataType {
+function remapBundlerNames(data: BundlerDataType): BundlerDataType {
   var ret: BundlerDataType = {}
 
   function entriesToObject(e: [string, any][]): any {
-    return e.reduce((set,val)=>({...set, [val[0]]:val[1]}), {})
+    return e.reduce((set, val) => ({ ...set, [val[0]]: val[1] }), {})
   }
 
   for (const date of Object.keys(data)) {
     ret[date] = entriesToObject(
       Object.entries(data[date])
-        .map(([k,v])=>[ mapBundlerName(k),v ])
+        .map(([k, v]) => [mapBundlerName(k), v])
     )
   }
   return ret
@@ -75,26 +80,32 @@ export function parseDateTime(dateTimeString: string): Date {
 
 function findLatestDateTimes(json: { [key: string]: any }, x: number): string[] | null {
   const dateTimes: { dateTime: Date, key: string }[] = [];
+  const mostRecentByDate: Map<string, { dateTime: Date, key: string }> = new Map();
 
   for (const key in json) {
     const dateTime = parseDateTime(key);
     if (dateTime !== null) {
-      dateTimes.push({ dateTime, key });
+      // Extract the date part only
+      const dateOnly = dateTime.toISOString().split('T')[0];
+      const existingEntry = mostRecentByDate.get(dateOnly);
+      
+      // Update the map if it's the first entry for this date or a more recent time on the same day
+      if (!existingEntry || existingEntry.dateTime < dateTime) {
+        mostRecentByDate.set(dateOnly, { dateTime, key });
+      }
     }
   }
 
-  if (dateTimes.length === 0) {
+  if (mostRecentByDate.size === 0) {
     return null;
   }
 
-  dateTimes.sort((a, b) => b.dateTime.getTime() - a.dateTime.getTime());
+  // Create an array from the map values and sort it by date in descending order
+  const sortedDateTimes = Array.from(mostRecentByDate.values());
+  sortedDateTimes.sort((a, b) => b.dateTime.getTime() - a.dateTime.getTime());
 
-  return dateTimes.slice(0, x).map(dt => dt.key);
-}
-
-function removeOldTestResults(latestTestResults: IDisplayBundlersOverallTestResults) {
-
-
+  // Return only the required number of most recent entries
+  return sortedDateTimes.slice(0, x).map(dt => dt.key);
 }
 
 
@@ -111,10 +122,10 @@ function getLatestTestResults(data: IBundlersTestResults): IDisplayBundlersOvera
     const latestTest = data[latestDate];
     Object.keys(latestTest).forEach(bundlerName => {
       const latestTestResult: IDisplaySpecificBundlerOverallTestResult = {
-          name: latestTest[bundlerName].name,
-          totalTests: parseInt(latestTest[bundlerName].tests),
-          totalErrors: parseInt(latestTest[bundlerName].errors) + parseInt(latestTest[bundlerName].failures), // we treat skipped as successful tests
-        
+        name: latestTest[bundlerName].name,
+        totalTests: parseInt(latestTest[bundlerName].tests),
+        totalErrors: parseInt(latestTest[bundlerName].errors) + parseInt(latestTest[bundlerName].failures), // we treat skipped as successful tests
+
       }
       if (!latestTestResults[latestDate]) latestTestResults[latestDate] = {};
       latestTestResults[latestDate][bundlerName] = latestTestResult;
@@ -140,6 +151,12 @@ function countBundlerNames(results: IBundlersTestResults): Record<string, number
   return bundlerCounts;
 }
 
+function getTestResultsEnum(testcase: ITestCase) {
+  if (testcase['failure'] || testcase['error']) return 'error';
+  if (testcase['skipped']) return 'skipped';
+  return 'success';
+}
+
 function sortBundlersByCount(results: IBundlersTestResults): IBundlerDisplayName[] {
   const bundlerCounts: Record<string, number> = countBundlerNames(results);
 
@@ -155,8 +172,8 @@ function sortBundlersByCount(results: IBundlersTestResults): IBundlerDisplayName
   // Create an array of IBundlerDisplayName objects sorted by count
   const sortedBundlerDisplayNames: IBundlerDisplayName[] = [];
   for (const bundlerName of sortedBundlerNames) {
-    const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName]?.name?.replace(/^(.)/, ch=>ch.toUpperCase());
-    sortedBundlerDisplayNames.push({ bundlerName, bundlerDisplayName : bundlerDisplayName ?? bundlerName });
+    const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName]?.name?.replace(/^(.)/, ch => ch.toUpperCase());
+    sortedBundlerDisplayNames.push({ bundlerName, bundlerDisplayName: bundlerDisplayName ?? bundlerName });
   }
 
   return sortedBundlerDisplayNames;
@@ -175,13 +192,13 @@ function getBundlersPerTestResults(data: IBundlersTestResults): IDisplayBundlers
     Object.keys(bundlerTestResults.testcase).forEach((testcaseKey: string) => {
       const testcase = bundlerTestResults.testcase[testcaseKey];
       const specificBundlerPerTestResult: IDisplaySpecificBundlerPerTestResult = {
-        success: (testcase['failure'] || testcase['error']) ? false : true,
+        result: getTestResultsEnum(testcase),
       }
       // we haven't seen this test case yet
       if (!bundlersPerTestResults[testcase.name]) {
         bundlersPerTestResults[testcase.name] = {};
       }
-      bundlersPerTestResults[testcase.name][bundlerName]= specificBundlerPerTestResult;
+      bundlersPerTestResults[testcase.name][bundlerName] = specificBundlerPerTestResult;
     })
   })
   return bundlersPerTestResults;
@@ -190,42 +207,127 @@ function getBundlersPerTestResults(data: IBundlersTestResults): IDisplayBundlers
 
 
 const bundlers = () => {
+  // Get the initial value of the 'v' parameter from the URL
+  const getInitialBundlerVersion = () => {
+    if (typeof window !== 'undefined') {
+      return new URLSearchParams(window.location.search).get('v') || '07';
+    }
+    return '';
+  };
 
   const [data, setData] = useState(null)
   const [isLoading, setLoading] = useState(false)
+  const [bundlerVersion, setBundlerVersion] = useState(getInitialBundlerVersion);
+  const [showError, setShowError] = useState(false);
 
 
-  useEffect(() => {
+
+  const setUrlParam = (key: string, value: string) => {
+    if (typeof window !== 'undefined') {
+      const searchParams = new URLSearchParams(window.location.search);
+      searchParams.set(key, value);
+      window.history.pushState({}, '', `${window.location.pathname}?${searchParams.toString()}`);
+      setBundlerVersion(value);
+    }
+  };
+
+  function buildGetHistoryURL() {
+    console.log(`bundlerVersion`, bundlerVersion);
+    return `${TEST_RESULTS_BASE_URL}v${bundlerVersion}/history/history.json`;
+  }
+
+  const fetchAndPopulateBundlerTestResults = () => {
     setLoading(true)
-    fetch(ALL_HISTORY)
-      .then((res) => res.json())
+    fetch(buildGetHistoryURL())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Something went wrong');
+      })
       .then((data) => {
         setData(remapBundlerNames(data) as any)
         setLoading(false)
       })
-  }, [])
+      .catch((error) => {
+        setShowError(true);
+        setLoading(false)
+      })
+  }
+
+  useEffect(fetchAndPopulateBundlerTestResults, [bundlerVersion])
 
   if (isLoading) return <LoadingIndicator></LoadingIndicator>
-  if (!data) return <p>No profile data</p>
+  if (!data) return <ErrorMessage showError={showError} message="Invalid bundler version" />
 
-  
+
   const bundlersNames: IBundlerDisplayName[] = sortBundlersByCount(data);
   const latestTestResults: IDisplayBundlersOverallTestResults = getLatestTestResults(data);
   const bundlersPerTestResults: IDisplayBundlersPerTestResults = getBundlersPerTestResults(data);
 
   return (
-    <div className="mt-28 flex flex-col pb-64 gap-y-28 horizon-layout">
+    <div className="mt-28 flex flex-col pb-64 gap-y-12 horizon-layout">
       <PageHeader
         name='Bundler CTS (Compatibility Test Suite) results dashboard'
         descriptions={[
           'A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of UserOperations and get the transaction included on-chain.',
-          'This page presents an overview of the test coverage results all open source bundlers in the ecosystem. Useful information about the test suite, bundler specs and more can be found in the section at the bottom.',
+          'This page presents an overview of the test coverage results of all open source bundlers in the ecosystem. Useful information about the test suite, bundler specs and more can be found in the section at the bottom.',
           <span>Published your own open source bundler? To add your bundler to the list, please submit a PR to <a href="https://github.com/eth-infinitism/bundler-test-executor" target="_blank" rel="noopener noreferrer" className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">https://github.com/eth-infinitism/bundler-test-executor</a></span>
         ]}
       />
 
+      <>
+        {(bundlerVersion != '07') && (
+          <div>
+          <div className="bg-blue-100 border-l-4 border-blue-500 p-4 flex items-center" role="alert">
+            <span className="text-xl mr-2">💡</span>
+            <div className="pl-3 text-left">
+              <h1 className="font-bold text-xl">
+                Showing results for legacy bundler version (0.6)
+              </h1>
+              <a
+                href="#"
+                className="block text-sm max-w-fit mt-2 text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setUrlParam('v', '07');
+                }}
+              >
+                See latest results
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        )}
+      </>
+      <>
+        {(bundlerVersion == '07') && (
+          <div>
+          <div className="bg-blue-100 border-l-4 border-blue-500 p-4 flex items-center" role="alert">
+            <span className="text-xl mr-2">💡</span>
+            <div className="pl-3 text-left">
+              <h1 className="font-bold text-xl">
+                Showing results for latest bundler version (0.7)
+              </h1>
+              <a
+                href="#"
+                className="block text-sm max-w-fit mt-2 text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setUrlParam('v', '06');
+                }}
+              >
+                See legacy results (v0.6)
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        )}
+      </>
       <BundlersOverallTestResultTable bundlersNames={bundlersNames} latestResults={latestTestResults} />
-      <BundlersPerTestResultsTable bundlersNames={bundlersNames} bundlersPerTestResults={bundlersPerTestResults} />      
+      <BundlersPerTestResultsTable bundlersNames={bundlersNames} bundlersPerTestResults={bundlersPerTestResults} />
       <div className="bg-[#FFFBF3] -mx-20 px-20 py-10">
         <ResourceBlock label="Resources" sections={bundlerResources} />
       </div>

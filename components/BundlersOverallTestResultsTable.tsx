@@ -46,7 +46,7 @@ const BundlersOverallTestResultTable: React.FC<IProps> = ({ bundlersNames, lates
     return (
       <tr className="min-h-11 border-b border-black" key={datetime}>
         <th>
-          {parseDateTime(datetime).toLocaleDateString()}, {parseDateTime(datetime).toLocaleTimeString()}
+          {parseDateTime(datetime).toLocaleDateString(navigator.language)}, {parseDateTime(datetime).toLocaleTimeString(navigator.language)}
         </th>
         {cells}
       </tr>

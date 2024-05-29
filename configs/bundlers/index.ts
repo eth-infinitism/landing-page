@@ -31,15 +31,15 @@ export const bundlerResources: IResourceSection[] = [
         url: 'https://github.com/stackup-wallet/stackup-bundler',
       },
       {
-        name: 'Silius Bundler',
+        name: 'Silius',
         url: 'https://github.com/Vid201/silius/',
       },
       {
-        name: 'Skandha Bundler',
+        name: 'Skandha',
         url: 'https://github.com/etherspot/skandha',
       },
       {
-        name: 'Voltaire-Bundler',
+        name: 'Voltaire',
         url: 'https://github.com/candidelabs/voltaire',
       },
       {
@@ -50,6 +50,15 @@ export const bundlerResources: IResourceSection[] = [
         name: 'Transeptor',
         url: 'https://github.com/transeptorlabs/transeptor-bundler',
       },
+      {
+        name: 'Alto',
+        url: 'https://github.com/pimlicolabs/alto',
+      },
+      {
+        name: 'Rundler',
+        url: 'https://github.com/alchemyplatform/rundler',
+      },
+      
     ],
   },
   {

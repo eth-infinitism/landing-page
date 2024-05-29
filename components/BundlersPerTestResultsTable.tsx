@@ -6,6 +6,16 @@ interface IProps {
   bundlersPerTestResults: IDisplayBundlersPerTestResults;
 }
 
+function getTestResultDisplauEmoji(result: string): string{
+  switch(result) {
+    case 'error': return '❌';
+    case 'skipped': return '➖';
+    case 'success': return '✅';
+    default: return 'N/A';
+  }
+
+}
+
 const BundlersPerTestResultsTable: React.FC<IProps> = ({
   bundlersNames: bundlerDisplayNames,
   bundlersPerTestResults,
@@ -36,7 +46,7 @@ const BundlersPerTestResultsTable: React.FC<IProps> = ({
                 {bundlerDisplayNames.map(displayName => (
                   <td className="pl-5 text-center" key={displayName.bundlerName}>
                     <div className={`leading-[2rem] w-full flex flex-row items-center justify-center`}>
-                      {bundlerPerTestResult[displayName.bundlerName]?.success ? '✅' : '❌'}
+                      {getTestResultDisplauEmoji(bundlerPerTestResult[displayName.bundlerName]?.result)}
                     </div>
                   </td>
                 ))}

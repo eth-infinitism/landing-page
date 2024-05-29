@@ -1,7 +1,7 @@
 /**
  *  Raw data interfaces
  */
-interface ITestCase {
+export interface ITestCase {
   classname: string;
   name: string;
   time: string;
@@ -66,7 +66,7 @@ export interface IBundlerDisplayName {
  */
 
 export interface IDisplaySpecificBundlerPerTestResult {
-  success: boolean,
+  result: string,
 }
 
 export interface IDisplayBundlerPerTestResult {
