@@ -19,8 +19,21 @@ npm run dev
 yarn dev
 ```
 
-There you go. Check [localhost:3000](http://localhost:3000).
+If you want to display the test results from a local file, make sure you checkout the "bundler-test-results" project, and symlink from this project's "public" folder to it.
+
+e.g. 
+```bash
+cd public; ln -s ../../bundler-test-results/v06
+```
+
+Then run the project using the command
+
+```bash
+npm run dev:localtestresults
+```
+
+The site will be accessable on [localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-
+Merging to the `master` branch will automaticlaly deploy to Vercel

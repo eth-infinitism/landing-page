@@ -22,9 +22,12 @@ const BundlersPerTestResultsTable: React.FC<IProps> = ({
 }) => {
   return (
     <div>
-      <h1 className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-12">
+      <h1 className="font-bold text-xl border-l-4 border-black pl-3 text-left mb-4">
         Per-test result of latest run
       </h1>
+      <h2 className="font-light text-xs mb-12">
+        ( ✅ success ; ❌ error ; ➖ skipped )
+      </h2>
       <div className='overflow-x-scroll'>
         <table className="border-spacing-0 w-full">
           <thead>

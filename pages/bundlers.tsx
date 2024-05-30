@@ -14,20 +14,11 @@ import ErrorMessage from '@components/ErrorMessage';
 
 //for local dev, requires local checkout of "bundler-test-results" project, and symlink from "public" folder to it
 // (eg. cd public; ln -s ../../bundler-test-results/v06)
-const TEST_RESULTS_BASE_URL = process.env.NODE_ENV == 'development' ? '/':`https://bundler-test-results.erc4337.io/`
-const ALL_HISTORY = `${TEST_RESULTS_BASE_URL}history/history.json`;
+const localTestResults = process.env.TEST_RESULTS == 'local';
+
+const TEST_RESULTS_BASE_URL = (process.env.NODE_ENV == 'development' && localTestResults) ? '/' : `https://bundler-test-results.erc4337.io/`
+
 const NUMBER_OF_LATEST_TESTS_RESULTS = 10;
-
-const mapBundlerNames: { [key: string]: string } = {
-  'aabundler-launcher': 'aabundler',
-  'stackup-bundler-launcher': 'stackup',
-  'aa-bundler-rust-launcher': 'silius',
-  'skandha-launcher': 'skandha',
-  'voltaire-bundler-launcher': 'voltaire'
-
-};
-
-
 
 
 type BundlerDataType = { [data: string]: { [bundler: string]: any } }

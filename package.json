@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn dev-folders && next dev",
-    "dev-folders": "rm -rf public/v0*; test -d ../bundler-test-results && for d in ../bundler-test-results/v0*; do ln -w -s ../$d ./public || exit 1; done",
+    "dev": "cross-env TEST_RESULTS=url next dev",
+    "dev:localtestresults": "npm run cleanup-and-link && cross-env TEST_RESULTS=local next dev",
+    "clean": "rm -rf public/v0*",
+    "link": "if [ -d ../bundler-test-results ]; then for d in ../bundler-test-results/v0*; do ln -s $d public/ || exit 1; done; fi",
+    "cleanup-and-link": "npm run clean && npm run link",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -28,6 +31,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.18",

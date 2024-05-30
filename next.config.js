@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  env: {
+    TEST_RESULTS: process.env.TEST_RESULTS,
+  },
 };
 const withPlugins = require('next-compose-plugins');
 const withNextra = require('nextra')({
