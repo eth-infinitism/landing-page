@@ -4,7 +4,7 @@ With EOAs, the address is consistent across all EVM networks. As long as the use
 
 Users should be able to deterministically know their account address and keep it consistent on every EVM network irrespective of whether the account has been deployed or not. This means that they can generate an account and start sending funds to it with the knowledge that they'll be able to control those funds at any time, provided they have the correct verification method.
 
-ERC-4337 does this by using the `CREATE2` opcode through a [Singleton Factory](https://eips.ethereum.org/EIPS/eip-2470) - the [Account Factory contract](./account-factory-contract.md). 
+ERC-4337 does this by using the `CREATE2` opcode through a [Singleton Factory](https://eips.ethereum.org/EIPS/eip-2470) - the [Account Factory contract](./account-factory-contract). 
 For example, here is how you can calculate a `CREATE2` address with ethers.js:
 
 ```
