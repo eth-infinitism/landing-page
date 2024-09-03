@@ -140,6 +140,10 @@ export const Code: IResourceSection[] = [
       {
         name: `JiffyScan`,
         url: `https://www.jiffyscan.xyz/`
+      },
+      {
+        name: `Scope`,
+        url: `https://scope.sh/`
       }
     ]
   },
