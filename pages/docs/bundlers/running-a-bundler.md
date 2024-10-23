@@ -15,7 +15,7 @@ If the UserOperation object passes these sanity checks, the bundler must next ru
 
 In order to add a `UserOperation` into the UserOp mempool (and later to add it into a bundle) we need to "simulate" its validation to make sure it is valid, and that it is capable of paying for its own execution. In addition, we need to verify that the same will hold true when executed on-chain. For this purpose, the `validateUserOp()` function of a `UserOperation`'s `sender` contract is not allowed to access any information that might change between simulation and execution, such as current block time, number, hash etc. 
 
-In addition, a `UserOperation` is only allowed to access data related to this `sender` address: Multiple `UserOperations` should not access the same storage, so that it is impossible to invalidate a large number of `UserOperations` with a single state change. 
+In addition, validation of a `UserOperation` is only allowed to access data related to this `sender` address: Multiple `UserOperations` should not access the same storage, so that it is impossible to invalidate a large number of `UserOperations` with a single state change. 
 
 There are 3 special contracts that interact with the account: the factory (`initCode`) that deploys the contract, the paymaster that can pay for the gas, and signature aggregator. Each of these contracts is also restricted in its storage access, to make sure `UserOperation` validations are isolated.
 
