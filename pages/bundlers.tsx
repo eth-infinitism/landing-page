@@ -204,7 +204,7 @@ const bundlers = () => {
   // Get the initial value of the 'v' parameter from the URL
   const getInitialBundlerVersion = () => {
     if (typeof window !== 'undefined') {
-      return new URLSearchParams(window.location.search).get('v') || '07';
+      return new URLSearchParams(window.location.search).get('v') || '08';
     }
     return '';
   };
@@ -271,53 +271,89 @@ const bundlers = () => {
       />
 
       <>
-        {(bundlerVersion != '07') && (
+        {bundlerVersion !== '08' && (
           <div>
-          <div className="bg-blue-100 border-l-4 border-blue-500 p-4 flex items-center" role="alert">
-            <span className="text-xl mr-2">💡</span>
-            <div className="pl-3 text-left">
-              <h1 className="font-bold text-xl">
-                Showing results for legacy bundler version (0.6)
-              </h1>
-              <a
-                href="#"
-                className="block text-sm max-w-fit mt-2 text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
-                onClick={(event) => {
-                  event.preventDefault();
-                  setUrlParam('v', '07');
-                }}
-              >
-                See latest results
-              </a>
+            <div className="bg-blue-100 border-l-4 border-blue-500 p-4 flex items-center" role="alert">
+              <span className="text-xl mr-2">💡</span>
+              <div className="pl-3 text-left">
+                <h1 className="font-bold text-xl">
+                  Showing results for legacy bundler version (0.{bundlerVersion})
+                </h1>
+                <div className="flex flex-col gap-2 mt-2">
+                  <a
+                    href="#"
+                    className="text-sm text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setUrlParam('v', '08');
+                    }}
+                  >
+                    See latest version (v0.8)
+                  </a>
+                  {bundlerVersion === '07' && (
+                    <a
+                      href="#"
+                      className="text-sm text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setUrlParam('v', '06');
+                      }}
+                    >
+                      See legacy version (v0.6)
+                    </a>
+                  )}
+                  {bundlerVersion === '06' && (
+                    <a
+                      href="#"
+                      className="text-sm text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setUrlParam('v', '07');
+                      }}
+                    >
+                      See legacy version (v0.7)
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        
         )}
       </>
       <>
-        {(bundlerVersion == '07') && (
+        {bundlerVersion === '08' && (
           <div>
-          <div className="bg-blue-100 border-l-4 border-blue-500 p-4 flex items-center" role="alert">
-            <span className="text-xl mr-2">💡</span>
-            <div className="pl-3 text-left">
-              <h1 className="font-bold text-xl">
-                Showing results for latest bundler version (0.7)
-              </h1>
-              <a
-                href="#"
-                className="block text-sm max-w-fit mt-2 text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
-                onClick={(event) => {
-                  event.preventDefault();
-                  setUrlParam('v', '06');
-                }}
-              >
-                See legacy results (v0.6)
-              </a>
+            <div className="bg-blue-100 border-l-4 border-blue-500 p-4 flex items-center" role="alert">
+              <span className="text-xl mr-2">💡</span>
+              <div className="pl-3 text-left">
+                <h1 className="font-bold text-xl">
+                  Showing results for latest bundler version (0.8)
+                </h1>
+                <div className="flex flex-col gap-2 mt-2">
+                  <a
+                    href="#"
+                    className="text-sm text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setUrlParam('v', '07');
+                    }}
+                  >
+                    See legacy version (v0.7)
+                  </a>
+                  <a
+                    href="#"
+                    className="text-sm text-blue-600 visited:text-purple-600 hover:underline hover:decoration-2 hover:text-800"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setUrlParam('v', '06');
+                    }}
+                  >
+                    See legacy version (v0.6)
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        
         )}
       </>
       <BundlersOverallTestResultTable bundlersNames={bundlersNames} latestResults={latestTestResults} />
