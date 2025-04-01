@@ -154,16 +154,10 @@ function getTestResultsEnum(testcase: ITestCase) {
 function sortBundlersByCount(results: IBundlersTestResults): IBundlerDisplayName[] {
   const bundlerCounts: Record<string, number> = countBundlerNames(results);
 
-  // Convert the bundlerCounts object into an array of [bundlerName, count] pairs
-  const bundlerCountsArray = Object.entries(bundlerCounts);
+  // Get all bundler names and sort them alphabetically
+  const sortedBundlerNames = Object.keys(bundlerCounts).sort((a, b) => a.localeCompare(b));
 
-  // Sort the array by count, with the highest count first
-  bundlerCountsArray.sort((a, b) => b[1] - a[1]);
-
-  // Extract just the bundler names from the sorted array
-  const sortedBundlerNames = bundlerCountsArray.map(([bundlerName, _]) => bundlerName);
-
-  // Create an array of IBundlerDisplayName objects sorted by count
+  // Create an array of IBundlerDisplayName objects sorted alphabetically
   const sortedBundlerDisplayNames: IBundlerDisplayName[] = [];
   for (const bundlerName of sortedBundlerNames) {
     const bundlerDisplayName = results[Object.keys(results)[0]][bundlerName]?.name?.replace(/^(.)/, ch => ch.toUpperCase());
