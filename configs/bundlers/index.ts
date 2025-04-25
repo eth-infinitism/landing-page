@@ -27,7 +27,7 @@ export const bundlerResources: IResourceSection[] = [
         url: 'https://github.com/eth-infinitism/bundler',
       },
       {
-        name: 'Stackup Bundler',
+        name: 'Stackup',
         url: 'https://github.com/stackup-wallet/stackup-bundler',
       },
       {

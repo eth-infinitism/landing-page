@@ -1,12 +1,12 @@
 # UserOperation
-All components of ERC-4337 revolve around a pseudo-transaction object called a `UserOperation` which is used to execute actions through a smart contract account. This isn't to be mistaken for a regular transaction type.
+All components of ERC-4337 revolve around a pseudo-transaction object called a `UserOperation`, which is used to execute actions through a smart contract account. This isn't to be mistaken for a regular transaction type.
 
 
 |Field|Type|Description|
 |------|----|-----------|
 |`sender`|`address`|The address of the smart contract account|
 |`nonce`|`uint256`|Anti-replay protection; also used as the salt for first-time account creation|
-|`initCode`|`bytes`|Code used to deploy the account if not yet on-chain|
+|`initCode`|`bytes`|Code used to deploy the account if not yet on chain|
 |`callData`|`bytes`|Data that's passed to the sender for execution|
 |`callGasLimit`|`uint256`|Gas limit for execution phase|
 |`verificationGasLimit`|`uint256`|Gas limit for verification phase|

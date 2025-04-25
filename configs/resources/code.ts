@@ -6,7 +6,7 @@ export const Code: IResourceSection[] = [
     sectionName: "Getting started",
     resources: [
       {
-        name: `Trampoline, an ERC-4337-enabled browser extension wallet that takes care of the boilerplate so hackers can jump straight to experimenting with AA`,
+        name: `Trampoline, an ERC-4337-enabled browser-extension wallet that takes care of the boilerplate so hackers can jump straight to experimenting with AA`,
         url: `https://github.com/eth-infinitism/trampoline`
       },
       {
@@ -113,7 +113,7 @@ export const Code: IResourceSection[] = [
         url: `https://github.com/candidelabs/Candide-bundler-and-paymaster-RPC`
       },
       {
-        name: `Rust Implementation`,
+        name: `Silius: Rust Implementation`,
         url: `https://github.com/Vid201/silius/`
       },
       {
@@ -147,11 +147,11 @@ export const Code: IResourceSection[] = [
     sectionName: `Audits`,
     resources: [
       {
-        name: `OpenZepplin: Part 1`,
+        name: `OpenZeppelin: Part 1`,
         url: `https://blog.openzeppelin.com/eth-foundation-account-abstraction-audit/`
       },
       {
-        name: `OpenZepplin: Part 2`,
+        name: `OpenZeppelin: Part 2`,
         url: `https://blog.openzeppelin.com/eip-4337-ethereum-account-abstraction-incremental-audit/`
       }
     ]
