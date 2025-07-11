@@ -1,3 +1,6 @@
+> **⚠️ Deprecated:** This project is no longer maintained. Please use [our new Gitbook](https://github.com/eth-infinitism/gitbook) instead.
+
+
 # ERC 4337 landing page
 This is the frontend project of the ERC-4337 Landing Page, based on Next.js.
 
