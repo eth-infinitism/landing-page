@@ -1,5 +1,5 @@
 # Introduction
-A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of `UserOperations` and get the transaction included on-chain.
+A bundler is the core infrastructure component that allows account abstraction to work on any EVM network without requiring any changes to the protocol. Its purpose is to work with a new mempool of `UserOperations` and get the transaction included on chain.
 
 ## Security considerations
 When reading the ERC specs, you'll notice that there are many rules a bundler must follow. Each of these rules has been extensively debated and discussed by security researchers and builders within the Ethereum ecosystem.

@@ -14,11 +14,11 @@ export const Articles: IResourceSection[] = [
   {
     sectionName: `Introduction to Account Abstraction (AA)`,
     resources: [
-      { name: `EIP 4337 website from Infinitism`, url: `https://eip4337.com/en/latest/` },
+      { name: `EIP-4337 website from Infinitism`, url: `https://eip4337.com/en/latest/` },
       { name: `The History and Future of Account Abstraction by Nethermind`, url: `https://medium.com/nethermind-eth/the-history-and-future-of-account-abstraction-10cb097ebdc8` },
       { name: `Primer on AA by Argent`, url: `https://www.argent.xyz/blog/wtf-is-account-abstraction/` },
       { name: `Managing Complexity Via AA - A Simplified Future by Etherspot`, url: `https://etherspot.io/blog/account-abstraction-a-simplified-future/` },
-      { name: `Account Abstraction for Everyone Else by cami`, url: `https://camiinthisthang.substack.com/p/account-abstraction-for-everyone` }
+      { name: `Account Abstraction for Everyone Else by Cami`, url: `https://camiinthisthang.substack.com/p/account-abstraction-for-everyone` }
     ],
   },
   {
@@ -32,9 +32,9 @@ export const Articles: IResourceSection[] = [
   {
     sectionName: `EIP Articles & Discussions`,
     resources: [
-      { name: `Account Abstraction EIP:2938 by Status`, url: `https://our.status.im/account-abstraction-eip-2938/` },
-      { name: `ERC 4337: account abstraction without Ethereum protocol changes by Vitalik`, url: `https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a` },
-      { name: `We should be moving beyond EOAs, not enshrining them even further (EIP 3074-related)`, url: `https://ethereum-magicians.org/t/we-should-be-moving-beyond-eoas-not-enshrining-them-even-further-eip-3074-related/6538` }
+      { name: `Account Abstraction EIP-2938 by Status`, url: `https://our.status.im/account-abstraction-eip-2938/` },
+      { name: `ERC-4337: account abstraction without Ethereum protocol changes by Vitalik`, url: `https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a` },
+      { name: `We should be moving beyond EOAs, not enshrining them even further (EIP-3074-related)`, url: `https://ethereum-magicians.org/t/we-should-be-moving-beyond-eoas-not-enshrining-them-even-further-eip-3074-related/6538` }
     ]
   },
   {
@@ -93,7 +93,7 @@ export const Articles: IResourceSection[] = [
         url: `https://frontier.tech/unpacking-erc-4337`
       },
       {
-        name: `Unified ERC 4337 Mempool`,
+        name: `Unified ERC-4337 Mempool`,
         url: `https://notes.ethereum.org/@yoav/unified-erc-4337-mempool`
       }
     ]
@@ -123,7 +123,7 @@ export const Articles: IResourceSection[] = [
         url: `https://twitter.com/Crypto__Jesus_/status/1606307436406636547`
       },
       {
-        name: `why hasn't crypto taken off?`,
+        name: `Why hasn't crypto taken off?`,
         url: `https://twitter.com/divine_economy/status/1605230807299543041`
       },
       {
@@ -143,7 +143,7 @@ export const Articles: IResourceSection[] = [
         url: `https://twitter.com/Mulan0x/status/1583813663986577408`
       },
       {
-        name: `decentralized fee market`,
+        name: `Decentralized fee market`,
         url: `https://twitter.com/VitalikButerin/status/1576199517434949634`
       },
       {
@@ -151,7 +151,7 @@ export const Articles: IResourceSection[] = [
         url: `https://twitter.com/Ivshti/status/1529474442622947328`
       },
       {
-        name: `4337 Misconceptions`,
+        name: `EIP-4337 Misconceptions`,
         url: `https://twitter.com/johnrising_/status/1619166915624112131`
       },
       {

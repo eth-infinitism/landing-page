@@ -25,9 +25,9 @@ export default function Why() {
           a single transaction that gets included in the Ethereum chain.
         </p>
         <p className="mb-4">
-          Through ERC-4337 Account Abstraction is becoming widespread! Join the numerous projects in the ecosystem 
+          Through ERC-4337, Account Abstraction is becoming widespread! Join the numerous projects in the ecosystem 
           that understand that if we want to onboard the next billion users, accounts can't be forced to choose between
-          security and usabilty - they must offer users both.
+          security and usability - they must offer users both.
         </p>
         <p>
           ERC-4337 takes usability even one step further by introducing paymasters. This decentralized mechanism enables users to pay gas 
