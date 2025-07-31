@@ -9,7 +9,7 @@ import EF_icon from '@assets/logos/EF.jpeg';
 import nethermind_icon from '@assets/logos/nethermind.jpeg';
 import soulwallet_icon from '@assets/logos/soul_wallet.jpeg';
 import polygon_icon from '@assets/logos/polygon.jpeg';
-import arbitrum_icon from '@assets/logos/arbitrum.jpeg';
+import arbitrum_icon from '@assets/logos/arbitrum.png';
 import base_icon from '@assets/logos/base.jpeg';
 import gnosis_chain_icon from '@assets/logos/gnosis_chain.png';
 import safe_icon from '@assets/logos/safe.jpg';
