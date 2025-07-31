@@ -7,5 +7,5 @@ The stake value is not enforced on-chain, but specifically by each node while si
 ## Un-staked entities
 Under the following special conditions, unstaked entities still can be used:
 * An entity that doesn't use any storage at all, or only the sender's storage (not the entity's storage - that does require a stake)
-* If the `UserOperation` doesn't create a new account (that is `initCode` is empty), then the entity may also use [storage associated with the sender](../bundlers/running-a-bundler.md)
+* If the `UserOperation` doesn't create a new account (that is `initCode` is empty), then the entity may also use [storage associated with the sender](../bundlers/running-a-bundler)
 * A paymaster that has a `postOp()` method (that is, `validatePaymasterUserOp` returns `“context”`) must be staked
